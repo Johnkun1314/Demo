@@ -1,3 +1,3 @@
 # Learned
 
- I'v learned everything about computer!
+ I'v learned everything about computer!okok!
