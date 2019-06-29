@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="/public/admin/css/pintuer.css">
+<link rel="stylesheet" href="/public/admin/css/admin.css">
+<script src="/public/admin/js/jquery.js"></script>
+<script src="/public/admin/js/pintuer.js"></script>
+</head>
+<body>
+  <div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 订单详情</strong> <a href="" style="float:right; display:none;">添加字段</a></div>
+    <table class="table table-hover text-center">
+      <tr>
+        <th width="100" style="text-align:left; padding-left:20px;">花名</th>
+        <th>数目</th>
+        <th>单价</th>
+        <th>总价</th>
+        <!-- <th>状态</th> -->
+        <th width="310">操作</th>
+      </tr>
+      <!-- ejs 的模板引擎 -->
+      <% data.forEach(item=>{ %>
+         <tr>
+          <td style="text-align:left; padding-left:20px;"><%= item.fname %></td>
+          <td><%= item.dcount %>朵</td>
+          <td><%= item.fmoney %>元/朵</td>
+          <td><%= item.ftotal%>元</td>
+          <td>
+            <div class="button-group"> 
+              <a class="button border-main"  onclick="del(this,<%= item.id%>)"><span class="icon-edit"></span> 移出购物车</a> 
+              </div>
+          </td>
+      <% }) %>
+
+    </table>
+  </div>
+  <a href="/pay"> <button style="border:1px solid blue;position:absolute;margin-top:20px;right:95px;width:120px;height:40px;background-color: #fff;
+    border-radius: 4px;font-size: 14px;color: #0ae;" 
+    onmouseover="this.style.backgroundColor='greenyellow';this.style.color='#000'" 
+    onmouseout="this.style.backgroundColor='#fff';this.style.color='#0ae'">提交订单</button></a>
+<script>
+
+  function del(obj,id){
+    // 确认框
+    // console.log(obj);
+    // console.log('1');
+    id= id.toString()
+    if(id.length == 1){
+      id = '000'+id;
+    }else if(id.length == 2){
+      id = '00' + id;
+    }else if(id,length ==3){
+      id = '0' + id;
+    }
+    if (confirm("您确认要删除？")) {
+      
+      // 发送ajax请求删除
+      $.get("/ajax_reshopcar",{id:id},function(data){
+        // 判断是否删除成功
+        if (data==1) {
+          $(obj).parents("tr").remove();
+        }else{
+          alert("删除失败");
+        }
+      })
+    };
+
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="/public/admin/css/pintuer.css">
+<link rel="stylesheet" href="/public/admin/css/admin.css">
+<script src="/public/admin/js/jquery.js"></script>
+<script src="/public/admin/js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong><span class="icon-key"></span> 添加花</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="">
+          
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">花编号</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="fitem" size="50" placeholder="请输入花编号"   data-validate="required:请输入花编号,length#==4:花编号应该等于4位" />       
+        </div>
+      </div>  
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">花名</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="fname" size="50" placeholder="请输入花名"   data-validate="required:请输入花名,length#>=1:花名不为空" />       
+        </div>
+      </div> 
+
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">价格</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="fmoney" size="50" placeholder="请输入单价"   data-validate="required:请输入单价,length#>=0:单价不为0,length#<=3:单价应该小于1000元," />       
+        </div>
+      </div> 
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">余量</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="finventory" size="50" placeholder="请输入花余量"   data-validate="required:请输入花余量" />       
+        </div>
+      </div> 
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">所在仓库</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="wnumber" size="50" placeholder="请输入仓库号"   data-validate="required:请输入仓库号,length#>=1:仓库号不为空,length#<=2:最大仓库号为20" />       
+        </div>
+      </div> 
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">供应商</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="sname" size="50" placeholder="请输入供应商名称"   data-validate="required:请输入供应商名称" />       
+        </div>
+      </div> 
+
+
+      
+      <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>   
+        </div>
+      </div>      
+    </form>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="/public/admin/css/pintuer.css">
+<link rel="stylesheet" href="/public/admin/css/admin.css">
+<script src="/public/admin/js/jquery.js"></script>
+<script src="/public/admin/js/pintuer.js"></script>
+</head>
+<body>
+  <div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 评论详情</strong> <a href="" style="float:right; display:none;">添加字段</a></div>
+    <table class="table table-hover text-center">
+      <tr>
+            <th id="onumber" width="100" style="text-align:left; padding-left:20px;">订单号：<%= data.onumber%></th>
+          </tr>
+          <tr>
+                <th width="100" style="text-align:left; padding-left:20px;">评论时间：<%= data.utime%></th>
+              </tr>
+              <tr>
+                <th width="100" style="text-align:left; padding-left:20px;">评论内容:</th>
+              </tr>      
+    </table>
+    <textarea name="" id="comment" cols="30" rows="10" placeholder="<%= data.ucontent%>" style="margin-left:20px"></textarea>
+  </div>
+  <button onclick="submit()">提交评论</button>
+<script>
+    function submit(){
+
+      var reason = $('#comment').val();
+      var onumber = $('#onumber').text().substr(4);
+      console.log(reason)
+      console.log(onumber)
+      $.get("/ajax_comment",{comment:reason,onumber:onumber},function(data){
+        
+        if (data==1) {
+          $('#comment').val(reason);
+          alert('提交成功')
+        }else{
+          alert("提交失败");
+        }
+      })
+    }
+</script>
+</body>
+</html>

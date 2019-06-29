@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="/public/admin/css/pintuer.css">
+<link rel="stylesheet" href="/public/admin/css/admin.css">
+<script src="/public/admin/js/jquery.js"></script>
+<script src="/public/admin/js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong><span class="icon-key"></span> 用户注册</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="">
+          
+ 
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">姓名</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="cname" size="50" placeholder="请输入您的姓名"   data-validate="required:请输入您的姓名,length#>=1:姓名不能小于一个汉字,length#<=12:姓名最多12个汉字" />       
+        </div>
+      </div> 
+      
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">性别</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="csex" size="50" placeholder="请输入您的性别"   data-validate="required:性别应该为男或者女" />       
+        </div>
+      </div> 
+
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">联系方式</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="cphone" size="50" placeholder="请输入您的联系方式"   data-validate="required:请输入您的联系方式,length#==11:联系方式一个为11位" />
+        </div>
+      </div> 
+
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">常用地址</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="caddr" size="50" placeholder="请输入您的常用地址"   data-validate="required:请输入您的常用地址" />       
+        </div>
+      </div> 
+
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">密码</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="cpossword" size="50" placeholder="请输入您的密码"   data-validate="required:请输入您的密码" />       
+        </div>
+      </div> 
+
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">确认密码</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="possword" size="50" placeholder="请再次输入您的密码"   data-validate="required:请再次输入您的密码" />       
+        </div>
+      </div> 
+
+      
+      <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <button class="button bg-main icon-check-square-o" type="submit"> 注册</button>   
+        </div>
+      </div>      
+    </form>
+  </div>
+</div>
+</body></html>

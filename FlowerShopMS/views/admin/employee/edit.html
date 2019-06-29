@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="/public/admin/css/pintuer.css">
+<link rel="stylesheet" href="/public/admin/css/admin.css">
+<script src="/public/admin/js/jquery.js"></script>
+<script src="/public/admin/js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong><span class="icon-key"></span> 修改员工信息</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="">
+          
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">员工工号</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="enumber" size="50" placeholder="请输入员工工号" value="<%= data.enumber %>" readonly data-validate="required:请输入员工工号,length#==6:员工工号应该等于6位" />       
+        </div>
+      </div>  
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">姓名</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="ename" size="50" placeholder="请输入员工姓名" value="<%= data.ename %>"  data-validate="required:请输入员工姓名,length#>=1:姓名不能小于一个汉字,length#<=12:姓名最多12个汉字" />       
+        </div>
+      </div> 
+      
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">性别</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="esex" size="50" placeholder="请输入员工性别" value="<%= data.esex %>"  data-validate="required:性别应该为男或者女" />       
+        </div>
+      </div> 
+
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">年龄</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="eage" size="50" placeholder="请输入员工年龄" value="<%= data.eage %>"  data-validate="required:请输入员工姓名,length#>=:年龄一个大于18岁,length#<=12:年龄应该小于60岁" />       
+        </div>
+      </div> 
+
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">岗位</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="epost" size="50" placeholder="请输入员工岗位" value="<%= data.epost %>"  data-validate="required:请输入员工岗位" />       
+        </div>
+      </div> 
+
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">入职日期</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" id="mpass" name="einyear" size="50" placeholder="请输入员工入职日期" value="<%= data.einyear %>"  data-validate="required:请输入员工入职日期" />       
+        </div>
+      </div> 
+
+
+      <!-- <div class="form-group">
+        <div class="label">
+          <label for="sitename">状态：</label>
+        </div>
+        <div class="field">
+          <label for="" style="line-height:32px;"><input <%= data.status == 0 ? "checked" : ''%> type="radio" name="status" value="0" id=""> 白名单</label>
+          <label for="" style="line-height:32px;"><input <%= data.status == 1 ? "checked" : ''%> type="radio" name="status" value="1" id=""> 黑名单</label>
+        </div>
+      </div> -->
+      
+      <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>   
+        </div>
+      </div>      
+    </form>
+  </div>
+</div>
+</body></html>
