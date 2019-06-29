@@ -1,0 +1,74 @@
+
+****** PlanAhead v14.7
+  **** Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source E:/ISE/Term_PC/CPU/pa.fromNetlist.tcl
+# create_project -name CPU -dir "E:/ISE/Term_PC/CPU/planAhead_run_1" -part xc7a100tfgg484-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "E:/ISE/Term_PC/CPU/CPU.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {E:/ISE/Term_PC/CPU} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "CPU.ucf" [current_fileset -constrset]
+Adding file 'E:/ISE/Term_PC/CPU/CPU.ucf' to fileset 'constrs_1'
+# add_files [list {CPU.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc7a100tfgg484-3
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design CPU.ngc ...
+WARNING:NetListWriters:298 - No output is written to CPU.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file CPU.edif ...
+ngc2edif: Total memory usage is 85868 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/CPU.data/cache/CPU_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/CPU.data/cache/CPU_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'CPU' is not ideal for floorplanning, since the cellview 'CPU' defined in file 'CPU.ngc' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+Loading clock regions from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/fgg484/Package.xml
+Loading io standards from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : D:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/drc.xml
+Parsing UCF File [E:/ISE/Term_PC/CPU/CPU.ucf]
+Finished Parsing UCF File [E:/ISE/Term_PC/CPU/CPU.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 84 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+  LD => LDCE: 51 instances
+  LDE_1 => LDCE (inverted pins: G): 32 instances
+
+Phase 0 | Netlist Checksum: 030f97b6
+link_design: Time (s): elapsed = 00:00:17 . Memory (MB): peak = 747.563 ; gain = 307.539
+set_property iostandard LVCMOS18 [get_ports [list {Input_Data[32]} {Input_Data[31]} {Input_Data[30]} {Input_Data[29]} {Input_Data[28]} {Input_Data[27]} {Input_Data[26]} {Input_Data[25]} {Input_Data[24]} {Input_Data[23]} {Input_Data[22]} {Input_Data[21]} {Input_Data[20]} {Input_Data[19]} {Input_Data[18]} {Input_Data[17]} {Input_Data[16]} {Input_Data[15]} {Input_Data[14]} {Input_Data[13]} {Input_Data[12]} {Input_Data[11]} {Input_Data[10]} {Input_Data[9]} {Input_Data[8]} {Input_Data[7]} {Input_Data[6]} {Input_Data[5]} {Input_Data[4]} {Input_Data[3]} {Input_Data[2]} {Input_Data[1]}]]
+set_property iostandard LVCMOS18 [get_ports [list {led[7]} {led[6]} {led[5]} {led[4]} {led[3]} {led[2]} {led[1]} {led[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {Output_Data[32]} {Output_Data[31]} {Output_Data[30]} {Output_Data[29]} {Output_Data[28]} {Output_Data[27]} {Output_Data[26]} {Output_Data[25]} {Output_Data[24]} {Output_Data[23]} {Output_Data[22]} {Output_Data[21]} {Output_Data[20]} {Output_Data[19]} {Output_Data[18]} {Output_Data[17]} {Output_Data[16]} {Output_Data[15]} {Output_Data[14]} {Output_Data[13]} {Output_Data[12]} {Output_Data[11]} {Output_Data[10]} {Output_Data[9]} {Output_Data[8]} {Output_Data[7]} {Output_Data[6]} {Output_Data[5]} {Output_Data[4]} {Output_Data[3]} {Output_Data[2]} {Output_Data[1]}]]
+set_property iostandard LVCMOS18 [get_ports [list {SW[4]} {SW[3]} {SW[2]} {SW[1]} {SW[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {which[2]} {which[1]} {which[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {Input_Data[32]} {Input_Data[31]} {Input_Data[30]} {Input_Data[29]} {Input_Data[28]} {Input_Data[27]} {Input_Data[26]} {Input_Data[25]} {Input_Data[24]} {Input_Data[23]} {Input_Data[22]} {Input_Data[21]} {Input_Data[20]} {Input_Data[19]} {Input_Data[18]} {Input_Data[17]} {Input_Data[16]} {Input_Data[15]} {Input_Data[14]} {Input_Data[13]} {Input_Data[12]} {Input_Data[11]} {Input_Data[10]} {Input_Data[9]} {Input_Data[8]} {Input_Data[7]} {Input_Data[6]} {Input_Data[5]} {Input_Data[4]} {Input_Data[3]} {Input_Data[2]} {Input_Data[1]}]]
+set_property iostandard LVCMOS18 [get_ports [list Clk]]
+set_property iostandard LVCMOS18 [get_ports [list shine]]
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Apr 11 16:54:50 2019...
+INFO: [Common 17-83] Releasing license: PlanAhead

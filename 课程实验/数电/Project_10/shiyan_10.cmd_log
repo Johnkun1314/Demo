@@ -1,0 +1,17 @@
+xst -intstyle ise -ifn "D:/FPGA/shiyan_10/shiyan_10.xst" -ofn "D:/FPGA/shiyan_10/shiyan_10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc shiyan_10.ucf -p xc7a100t-fgg484-3 shiyan_10.ngc shiyan_10.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o shiyan_10_map.ncd shiyan_10.ngd shiyan_10.pcf 
+par -w -intstyle ise -ol high -mt off shiyan_10_map.ncd shiyan_10.ncd shiyan_10.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml shiyan_10.twx shiyan_10.ncd -o shiyan_10.twr shiyan_10.pcf -ucf shiyan_10.ucf 
+bitgen -intstyle ise -f shiyan_10.ut shiyan_10.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc shiyan_10.ucf -p xc7a100t-fgg484-3 shiyan_10.ngc shiyan_10.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o shiyan_10_map.ncd shiyan_10.ngd shiyan_10.pcf 
+par -w -intstyle ise -ol high -mt off shiyan_10_map.ncd shiyan_10.ncd shiyan_10.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml shiyan_10.twx shiyan_10.ncd -o shiyan_10.twr shiyan_10.pcf -ucf shiyan_10.ucf 
+bitgen -intstyle ise -f shiyan_10.ut shiyan_10.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc shiyan_10.ucf -p xc7a100t-fgg484-3 shiyan_10.ngc shiyan_10.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o shiyan_10_map.ncd shiyan_10.ngd shiyan_10.pcf 
+par -w -intstyle ise -ol high -mt off shiyan_10_map.ncd shiyan_10.ncd shiyan_10.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml shiyan_10.twx shiyan_10.ncd -o shiyan_10.twr shiyan_10.pcf -ucf shiyan_10.ucf 
+bitgen -intstyle ise -f shiyan_10.ut shiyan_10.ncd 
+xst -intstyle ise -ifn "E:/ISE/Project_10/shiyan_10.xst" -ofn "E:/ISE/Project_10/shiyan_10.syr" 

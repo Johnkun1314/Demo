@@ -1,0 +1,8 @@
+
+ERROR: This host does not have the appropriate Microsoft Visual C++
+       redistributable packages installed.
+
+       Launching installer: "D:/Xilinx/14.7/ISE_DS/PlanAhead\tps\win32\xvcredist.exe"
+VC++ 2008 Redistributable has failed to install,
+please make sure you have adminstrative privilege.
+请按任意键继续. . . 

@@ -1,0 +1,5 @@
+vhdtdtfi -lib work E:/ISE/Term_PC/Regs/LedTube.v -lang verilog -prj Regs -o LedTube.spl -module LedTube -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 LedTube.spl E:/ISE/Term_PC/Regs/LedTube.sym 
+vhdtdtfi -lang verilog -prj Regs -o E:/ISE/Term_PC/Regs/LedTube.tfi -lib work E:/ISE/Term_PC/Regs//LedTube.v -module LedTube -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/Regs/LedTube.v -lang verilog -prj Regs -o LedTube.spl -module LedTube -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 LedTube.spl E:/ISE/Term_PC/Regs/LedTube.sym 

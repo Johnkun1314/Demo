@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU/TOP.xst" -ofn "E:/ISE/Term_PC/CPU/TOP.syr" 

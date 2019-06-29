@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\ISE\Term_PC\FullAdderPlugs\fulladderplugs.ncd
+OUTFILE=E:\ISE\Term_PC\FullAdderPlugs\fulladderplugs.bit
+FAMILY=Artix7
+PART=xc7a100t-3fgg484
+WORKINGDIR=E:\ISE\Term_PC\FullAdderPlugs
+LICENSE=WebPack
+USER_INFO=__0_0_0

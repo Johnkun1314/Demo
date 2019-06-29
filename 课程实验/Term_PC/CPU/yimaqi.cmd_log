@@ -1,0 +1,8 @@
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/yimaqi.v -lang verilog -prj CPU -o yimaqi.spl -module yimaqi -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 yimaqi.spl E:/ISE/Term_PC/CPU/yimaqi.sym 
+vhdtdtfi -lang verilog -prj CPU -o E:/ISE/Term_PC/CPU/yimaqi.tfi -lib work E:/ISE/Term_PC/CPU//yimaqi.v -module yimaqi -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/yimaqi.v -lang verilog -prj CPU -o yimaqi.spl -module yimaqi -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 yimaqi.spl E:/ISE/Term_PC/CPU/yimaqi.sym 
+vhdtdtfi -lang verilog -prj CPU -o E:/ISE/Term_PC/CPU/yimaqi.tfi -lib work E:/ISE/Term_PC/CPU//yimaqi.v -module yimaqi -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/yimaqi.v -lang verilog -prj CPU -o yimaqi.spl -module yimaqi -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 yimaqi.spl E:/ISE/Term_PC/CPU/yimaqi.sym 

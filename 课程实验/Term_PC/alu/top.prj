@@ -1,0 +1,2 @@
+verilog work "../CPU/ALU.v"
+verilog work "top.v"

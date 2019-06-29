@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Sun Mar 24 21:58:40 2019
+# Process ID: 12360
+# Log file: E:/ISE/Term_PC/FullAdderPlugs/planAhead_run_1/planAhead.log
+# Journal file: E:/ISE/Term_PC/FullAdderPlugs/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/ISE/Term_PC/FullAdderPlugs/pa.fromNetlist.tcl
+set_property iostandard LVCMOS18 [get_ports [list {a[3]} {a[2]} {a[1]} {a[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {b[3]} {b[2]} {b[1]} {b[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {sum[3]} {sum[2]} {sum[1]} {sum[0]}]]
+startgroup
+set_property package_pin T3 [get_ports {a[3]}]
+endgroup
+startgroup
+set_property package_pin U3 [get_ports {a[2]}]
+endgroup
+startgroup
+set_property package_pin T4 [get_ports {a[1]}]
+endgroup
+startgroup
+set_property package_pin V3 [get_ports {a[0]}]
+endgroup
+startgroup
+set_property package_pin W4 [get_ports {b[3]}]
+endgroup
+startgroup
+set_property package_pin Y4 [get_ports {b[2]}]
+endgroup
+startgroup
+set_property package_pin Y6 [get_ports {b[1]}]
+endgroup
+startgroup
+set_property package_pin W7 [get_ports {b[0]}]
+endgroup
+startgroup
+set_property package_pin R1 [get_ports {sum[3]}]
+endgroup
+startgroup
+set_property package_pin P2 [get_ports {sum[2]}]
+endgroup
+startgroup
+set_property package_pin P1 [get_ports {sum[1]}]
+endgroup
+startgroup
+set_property package_pin N2 [get_ports {sum[0]}]
+endgroup
+set_property iostandard LVCMOS18 [get_ports [list c_in]]
+set_property iostandard LVCMOS18 [get_ports [list c_out]]
+startgroup
+set_property package_pin Y7 [get_ports c_in]
+endgroup
+startgroup
+set_property package_pin J2 [get_ports c_out]
+endgroup
+set_property pulltype PULLDOWN [get_ports [list {a[3]} {a[2]} {a[1]} {a[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {b[3]} {b[2]} {b[1]} {b[0]}]]
+set_property pulltype PULLDOWN [get_ports [list c_in]]
+save_constraints

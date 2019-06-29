@@ -1,0 +1,51 @@
+
+
+# PlanAhead Generated IO constraints 
+
+NET "addr[2]" IOSTANDARD = LVCMOS18;
+NET "addr[1]" IOSTANDARD = LVCMOS18;
+NET "addr[0]" IOSTANDARD = LVCMOS18;
+NET "in[3]" IOSTANDARD = LVCMOS18;
+NET "in[2]" IOSTANDARD = LVCMOS18;
+NET "in[1]" IOSTANDARD = LVCMOS18;
+NET "in[0]" IOSTANDARD = LVCMOS18;
+NET "out[3]" IOSTANDARD = LVCMOS18;
+NET "out[2]" IOSTANDARD = LVCMOS18;
+NET "out[1]" IOSTANDARD = LVCMOS18;
+NET "out[0]" IOSTANDARD = LVCMOS18;
+NET "addr[2]" PULLDOWN;
+NET "addr[1]" PULLDOWN;
+NET "addr[0]" PULLDOWN;
+NET "in[2]" PULLDOWN;
+NET "in[1]" PULLDOWN;
+NET "in[0]" PULLDOWN;
+NET "in[3]" PULLDOWN;
+# PlanAhead Generated physical constraints 
+
+NET "addr[2]" LOC = T3;
+NET "addr[1]" LOC = U3;
+NET "addr[0]" LOC = T4;
+NET "in[3]" LOC = R6;
+NET "in[2]" LOC = U7;
+NET "in[1]" LOC = AB7;
+NET "in[0]" LOC = AB8;
+NET "out[3]" LOC = R1;
+NET "out[2]" LOC = P2;
+NET "out[1]" LOC = P1;
+NET "out[0]" LOC = N2;
+
+# PlanAhead Generated IO constraints 
+
+NET "clk" IOSTANDARD = LVCMOS18;
+NET "read" IOSTANDARD = LVCMOS18;
+NET "write" IOSTANDARD = LVCMOS18;
+
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = T5;
+NET "read" LOC = V8;
+NET "write" LOC = AA8;
+NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "read" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "write" CLOCK_DEDICATED_ROUTE = FALSE;

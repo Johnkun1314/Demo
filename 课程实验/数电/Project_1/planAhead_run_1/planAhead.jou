@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Sun Dec 09 12:41:41 2018
+# Process ID: 13624
+# Log file: E:/ISE/Project_1/planAhead_run_1/planAhead.log
+# Journal file: E:/ISE/Project_1/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/ISE/Project_1/pa.fromNetlist.tcl
+set_property pulltype PULLDOWN [get_ports [list A]]
+set_property pulltype PULLDOWN [get_ports [list B]]
+set_property pulltype PULLDOWN [get_ports [list C]]
+set_property pulltype PULLDOWN [get_ports [list D]]
+set_property pulltype PULLDOWN [get_ports [list E]]
+save_constraints

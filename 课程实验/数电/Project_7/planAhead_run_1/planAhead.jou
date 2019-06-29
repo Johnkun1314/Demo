@@ -1,0 +1,80 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Sun Dec 09 13:30:52 2018
+# Process ID: 11508
+# Log file: E:/ISE/Project_7/planAhead_run_1/planAhead.log
+# Journal file: E:/ISE/Project_7/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/ISE/Project_7/pa.fromNetlist.tcl
+set_property iostandard LVCMOS18 [get_ports [list {A[3]} {A[2]} {A[1]} {A[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {B[3]} {B[2]} {B[1]} {B[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {F[3]} {F[2]} {F[1]} {F[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {A[3]} {A[2]} {A[1]} {A[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {B[3]} {B[2]} {B[1]} {B[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list Add_Sub]]
+set_property iostandard LVCMOS18 [get_ports [list C0]]
+set_property iostandard LVCMOS18 [get_ports [list C4]]
+set_property iostandard LVCMOS18 [get_ports [list CF]]
+set_property iostandard LVCMOS18 [get_ports [list ZF]]
+set_property pulltype PULLDOWN [get_ports [list Add_Sub]]
+set_property pulltype PULLDOWN [get_ports [list C0]]
+startgroup
+set_property package_pin T3 [get_ports {A[3]}]
+endgroup
+startgroup
+set_property package_pin U3 [get_ports {A[2]}]
+endgroup
+startgroup
+set_property package_pin T4 [get_ports {A[1]}]
+endgroup
+startgroup
+set_property package_pin V3 [get_ports {A[0]}]
+endgroup
+startgroup
+set_property package_pin V4 [get_ports {B[3]}]
+endgroup
+startgroup
+set_property package_pin W4 [get_ports {B[2]}]
+endgroup
+startgroup
+set_property package_pin Y4 [get_ports {B[1]}]
+endgroup
+startgroup
+set_property package_pin Y6 [get_ports {B[0]}]
+endgroup
+startgroup
+set_property package_pin R1 [get_ports {F[3]}]
+endgroup
+startgroup
+set_property package_pin P2 [get_ports {F[2]}]
+endgroup
+startgroup
+set_property package_pin P1 [get_ports {F[1]}]
+endgroup
+startgroup
+set_property package_pin N2 [get_ports {F[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  Add_Sub]]
+startgroup
+set_property package_pin W7 [get_ports Add_Sub]
+endgroup
+startgroup
+set_property package_pin Y8 [get_ports C0]
+endgroup
+set_property package_pin "" [get_ports [list  C4]]
+set_property is_loc_fixed false [get_ports [list  {F[0]}]]
+startgroup
+set_property package_pin M2 [get_ports C4]
+endgroup
+startgroup
+set_property package_pin L1 [get_ports CF]
+endgroup
+startgroup
+set_property package_pin J2 [get_ports ZF]
+endgroup
+startgroup
+set_property package_pin N2 [get_ports {F[0]}]
+endgroup
+save_constraints

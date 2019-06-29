@@ -1,0 +1,15 @@
+[Inputs]
+=OP[3:0]=
+=A[32:1]=
+=B[32:1]=
+[Outputs]
+ZF
+CF
+OF
+SF
+PF
+=F[32:1]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel ALU
+

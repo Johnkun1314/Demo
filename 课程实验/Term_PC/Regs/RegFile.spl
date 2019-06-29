@@ -1,0 +1,15 @@
+[Inputs]
+Clk
+reset
+Write_Reg
+=R_Addr_A[5:1]=
+=R_Addr_B[5:1]=
+=W_Addr[5:1]=
+=W_Data[32:1]=
+[Outputs]
+=R_Data_A[32:1]=
+=R_Data_B[32:1]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel RegFile
+

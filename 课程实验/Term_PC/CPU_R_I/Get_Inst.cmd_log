@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU_R_I/Get_Inst.v -lang verilog -prj CPU_R_I -o Get_Inst.spl -module Get_Inst -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Get_Inst.spl E:/ISE/Term_PC/CPU_R_I/Get_Inst.sym 

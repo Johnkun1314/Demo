@@ -1,0 +1,40 @@
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc project3.ucf -p xc7a100t-fgg484-3 project3.ngc project3.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o project3_map.ncd project3.ngd project3.pcf 
+par -w -intstyle ise -ol high -mt off project3_map.ncd project3.ncd project3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml project3.twx project3.ncd -o project3.twr project3.pcf -ucf project3.ucf 
+bitgen -intstyle ise -f project3.ut project3.ncd 
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o project3_map.ncd project3.ngd project3.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc project3.ucf -p xc7a100t-fgg484-3 project3.ngc project3.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o project3_map.ncd project3.ngd project3.pcf 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc project3.ucf -p xc7a100t-fgg484-3 project3.ngc project3.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o project3_map.ncd project3.ngd project3.pcf 
+par -w -intstyle ise -ol high -mt off project3_map.ncd project3.ncd project3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml project3.twx project3.ncd -o project3.twr project3.pcf -ucf project3.ucf 
+bitgen -intstyle ise -f project3.ut project3.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc project3.ucf -p xc7a100t-fgg484-3 project3.ngc project3.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o project3_map.ncd project3.ngd project3.pcf 
+par -w -intstyle ise -ol high -mt off project3_map.ncd project3.ncd project3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml project3.twx project3.ncd -o project3.twr project3.pcf -ucf project3.ucf 
+bitgen -intstyle ise -f project3.ut project3.ncd 
+bitgen -intstyle ise -f project3.ut project3.ncd 
+bitgen -intstyle ise -f project3.ut project3.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc project3.ucf -p xc7a100t-fgg484-3 project3.ngc project3.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o project3_map.ncd project3.ngd project3.pcf 
+par -w -intstyle ise -ol high -mt off project3_map.ncd project3.ncd project3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml project3.twx project3.ncd -o project3.twr project3.pcf -ucf project3.ucf 
+bitgen -intstyle ise -f project3.ut project3.ncd 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_3/project3.xst" -ofn "E:/ISE/Project_3/project3.syr" 

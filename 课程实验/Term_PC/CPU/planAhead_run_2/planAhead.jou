@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Thu Apr 11 19:10:26 2019
+# Process ID: 3280
+# Log file: E:/ISE/Term_PC/CPU/planAhead_run_2/planAhead.log
+# Journal file: E:/ISE/Term_PC/CPU/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/ISE/Term_PC/CPU/pa.fromNetlist.tcl
+startgroup
+set_property package_pin R4 [get_ports {SW[5]}]
+endgroup
+set_property iostandard LVCMOS18 [get_ports [list {SW[5]}]]
+save_constraints

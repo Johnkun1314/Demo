@@ -1,0 +1,13 @@
+[Inputs]
+Rst
+Clk
+[Outputs]
+OF
+ZF
+=ALU_F[5:1]=
+=M_R_Data[5:1]=
+=PC[5:1]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel CPU
+

@@ -1,0 +1,39 @@
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+vhdtdtfi -lib work E:/ISE/Term_PC/Get_Inst/Test.v -lang verilog -prj Get_Inst -o Test.spl -module Test -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Test.spl E:/ISE/Term_PC/Get_Inst/Test.sym 
+vhdtdtfi -lang verilog -prj Get_Inst -o E:/ISE/Term_PC/Get_Inst/Test.tfi -lib work E:/ISE/Term_PC/Get_Inst//Test.v -module Test -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Get_Inst.ucf -p xc7a100t-fgg484-3 Test.ngc Test.ngd  
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Test.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Get_Inst.ucf -p xc7a100t-fgg484-3 Test.ngc Test.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Test_map.ncd Test.ngd Test.pcf 
+par -w -intstyle ise -ol high -mt off Test_map.ncd Test.ncd Test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Test.twx Test.ncd -o Test.twr Test.pcf -ucf Get_Inst.ucf 
+bitgen -intstyle ise -f Test.ut Test.ncd 

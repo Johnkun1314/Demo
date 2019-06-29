@@ -1,0 +1,29 @@
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc CPU_R_I_J.ucf -p xc7a100t-fgg484-3 CPU_R_I_J.ngc CPU_R_I_J.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o CPU_R_I_J_map.ncd CPU_R_I_J.ngd CPU_R_I_J.pcf 
+par -w -intstyle ise -ol high -mt off CPU_R_I_J_map.ncd CPU_R_I_J.ncd CPU_R_I_J.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU_R_I_J.twx CPU_R_I_J.ncd -o CPU_R_I_J.twr CPU_R_I_J.pcf -ucf CPU_R_I_J.ucf 
+bitgen -intstyle ise -f CPU_R_I_J.ut CPU_R_I_J.ncd 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.xst" -ofn "E:/ISE/Term_PC/CPU_R_I_J/CPU_R_I_J.syr" 

@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+Get_Inst instance_name (
+    .inst_code(inst_code), 
+    .clk(clk), 
+    .PC(PC)
+    );
+
+

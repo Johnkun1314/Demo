@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "E:/ISE/Project_1/Demo_1.xst" -ofn "E:/ISE/Project_1/Demo_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Demo_1.ucf -p xc7a100t-fgg484-3 Demo_1.ngc Demo_1.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Demo_1_map.ncd Demo_1.ngd Demo_1.pcf 
+par -w -intstyle ise -ol high -mt off Demo_1_map.ncd Demo_1.ncd Demo_1.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Demo_1.twx Demo_1.ncd -o Demo_1.twr Demo_1.pcf -ucf Demo_1.ucf 
+bitgen -intstyle ise -f Demo_1.ut Demo_1.ncd 

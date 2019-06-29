@@ -1,0 +1,8 @@
+verilog isim_temp "ipcore_dir/RAM_B.v"
+verilog isim_temp "yimaqi.v"
+verilog isim_temp "RegFile.v"
+verilog isim_temp "Get_Inst.v"
+verilog isim_temp "ALU.v"
+verilog isim_temp "CPU.v"
+verilog isim_temp "test.v"
+verilog isim_temp "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

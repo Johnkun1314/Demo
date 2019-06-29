@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "E:/ISE/Project_7/Demo_7.xst" -ofn "E:/ISE/Project_7/Demo_7.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Demo_7.ucf -p xc7a100t-fgg484-3 Demo_7.ngc Demo_7.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Demo_7_map.ncd Demo_7.ngd Demo_7.pcf 
+par -w -intstyle ise -ol high -mt off Demo_7_map.ncd Demo_7.ncd Demo_7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Demo_7.twx Demo_7.ncd -o Demo_7.twr Demo_7.pcf -ucf Demo_7.ucf 
+bitgen -intstyle ise -f Demo_7.ut Demo_7.ncd 
+xst -intstyle ise -ifn "E:/ISE/Project_7/Demo_7.xst" -ofn "E:/ISE/Project_7/Demo_7.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Demo_7.ucf -p xc7a100t-fgg484-3 Demo_7.ngc Demo_7.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Demo_7_map.ncd Demo_7.ngd Demo_7.pcf 
+par -w -intstyle ise -ol high -mt off Demo_7_map.ncd Demo_7.ncd Demo_7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Demo_7.twx Demo_7.ncd -o Demo_7.twr Demo_7.pcf -ucf Demo_7.ucf 
+bitgen -intstyle ise -f Demo_7.ut Demo_7.ncd 

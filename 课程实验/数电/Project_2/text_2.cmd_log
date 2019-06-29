@@ -1,0 +1,26 @@
+xst -intstyle ise -ifn "E:/ISE/Project_2/text_2.xst" -ofn "E:/ISE/Project_2/text_2.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_2/text_2.xst" -ofn "E:/ISE/Project_2/text_2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-fgg484-3 text_2.ngc text_2.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o text_2_map.ncd text_2.ngd text_2.pcf 
+par -w -intstyle ise -ol high -mt off text_2_map.ncd text_2.ncd text_2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml text_2.twx text_2.ncd -o text_2.twr text_2.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc text_2.ucf -p xc7a100t-fgg484-3 text_2.ngc text_2.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o text_2_map.ncd text_2.ngd text_2.pcf 
+par -w -intstyle ise -ol high -mt off text_2_map.ncd text_2.ncd text_2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml text_2.twx text_2.ncd -o text_2.twr text_2.pcf -ucf text_2.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc text_2.ucf -p xc7a100t-fgg484-3 text_2.ngc text_2.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o text_2_map.ncd text_2.ngd text_2.pcf 
+par -w -intstyle ise -ol high -mt off text_2_map.ncd text_2.ncd text_2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml text_2.twx text_2.ncd -o text_2.twr text_2.pcf -ucf text_2.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc text_2.ucf -p xc7a100t-fgg484-3 text_2.ngc text_2.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o text_2_map.ncd text_2.ngd text_2.pcf 
+par -w -intstyle ise -ol high -mt off text_2_map.ncd text_2.ncd text_2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml text_2.twx text_2.ncd -o text_2.twr text_2.pcf -ucf text_2.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc text_2.ucf -p xc7a100t-fgg484-3 text_2.ngc text_2.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o text_2_map.ncd text_2.ngd text_2.pcf 
+par -w -intstyle ise -ol high -mt off text_2_map.ncd text_2.ncd text_2.pcf 
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o text_2_map.ncd text_2.ngd text_2.pcf 
+par -w -intstyle ise -ol high -mt off text_2_map.ncd text_2.ncd text_2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml text_2.twx text_2.ncd -o text_2.twr text_2.pcf -ucf text_2.ucf 
+bitgen -intstyle ise -f text_2.ut text_2.ncd 
+xst -intstyle ise -ifn "E:/ISE/Project_2/text_2.xst" -ofn "E:/ISE/Project_2/text_2.syr" 

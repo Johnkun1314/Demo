@@ -1,0 +1,85 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml fulladderplugs.twx fulladderplugs.ncd -o
+fulladderplugs.twr fulladderplugs.pcf -ucf fulladderplugs.ucf
+
+Design file:              fulladderplugs.ncd
+Physical constraint file: fulladderplugs.pcf
+Device,package,speed:     xc7a100t,fgg484,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+a<0>           |c_out          |    6.532|
+a<0>           |sum<0>         |    5.797|
+a<0>           |sum<1>         |    5.740|
+a<0>           |sum<2>         |    6.033|
+a<0>           |sum<3>         |    6.337|
+a<1>           |c_out          |    6.986|
+a<1>           |sum<1>         |    6.192|
+a<1>           |sum<2>         |    6.487|
+a<1>           |sum<3>         |    6.791|
+a<2>           |c_out          |    6.314|
+a<2>           |sum<2>         |    5.916|
+a<2>           |sum<3>         |    6.103|
+a<3>           |c_out          |    6.343|
+a<3>           |sum<3>         |    6.146|
+b<0>           |c_out          |    7.157|
+b<0>           |sum<0>         |    6.240|
+b<0>           |sum<1>         |    6.357|
+b<0>           |sum<2>         |    6.658|
+b<0>           |sum<3>         |    6.962|
+b<1>           |c_out          |    7.376|
+b<1>           |sum<1>         |    6.572|
+b<1>           |sum<2>         |    6.877|
+b<1>           |sum<3>         |    7.181|
+b<2>           |c_out          |    6.529|
+b<2>           |sum<2>         |    5.816|
+b<2>           |sum<3>         |    6.322|
+b<3>           |c_out          |    6.307|
+b<3>           |sum<3>         |    6.104|
+c_in           |c_out          |    7.426|
+c_in           |sum<0>         |    6.121|
+c_in           |sum<1>         |    6.618|
+c_in           |sum<2>         |    6.927|
+c_in           |sum<3>         |    7.231|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Mar 24 22:04:15 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4998 MB
+
+
+

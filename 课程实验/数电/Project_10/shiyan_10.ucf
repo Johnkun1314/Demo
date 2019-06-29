@@ -1,0 +1,20 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = V8;
+NET "j" LOC = AA8;
+NET "k" LOC = AB6;
+NET "q" LOC = R1;
+NET "qb" LOC = P2;
+
+# PlanAhead Generated IO constraints 
+
+NET "clk" IOSTANDARD = LVCMOS18;
+NET "j" IOSTANDARD = LVCMOS18;
+NET "k" IOSTANDARD = LVCMOS18;
+NET "q" IOSTANDARD = LVCMOS18;
+NET "qb" IOSTANDARD = LVCMOS18;
+
+NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+
+

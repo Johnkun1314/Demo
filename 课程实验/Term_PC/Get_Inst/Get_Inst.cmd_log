@@ -1,0 +1,80 @@
+vhdtdtfi -lib work E:/ISE/Term_PC/Get_Inst/Get_Inst.v -lang verilog -prj Get_Inst -o Get_Inst.spl -module Get_Inst -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Get_Inst.spl E:/ISE/Term_PC/Get_Inst/Get_Inst.sym 
+vhdtdtfi -lang verilog -prj Get_Inst -o E:/ISE/Term_PC/Get_Inst/Get_Inst.tfi -lib work E:/ISE/Term_PC/Get_Inst//Get_Inst.v -module Get_Inst -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/Get_Inst/Get_Inst.v -lang verilog -prj Get_Inst -o Get_Inst.spl -module Get_Inst -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Get_Inst.spl E:/ISE/Term_PC/Get_Inst/Get_Inst.sym 
+vhdtdtfi -lang verilog -prj Get_Inst -o E:/ISE/Term_PC/Get_Inst/Get_Inst.tfi -lib work E:/ISE/Term_PC/Get_Inst//Get_Inst.v -module Get_Inst -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/Get_Inst/Get_Inst.v -lang verilog -prj Get_Inst -o Get_Inst.spl -module Get_Inst -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Get_Inst.spl E:/ISE/Term_PC/Get_Inst/Get_Inst.sym 
+vhdtdtfi -lang verilog -prj Get_Inst -o E:/ISE/Term_PC/Get_Inst/Get_Inst.tfi -lib work E:/ISE/Term_PC/Get_Inst//Get_Inst.v -module Get_Inst -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-fgg484-3 Get_Inst.ngc Get_Inst.ngd  
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-fgg484-3 Get_Inst.ngc Get_Inst.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Get_Inst_map.ncd Get_Inst.ngd Get_Inst.pcf 
+par -w -intstyle ise -ol high -mt off Get_Inst_map.ncd Get_Inst.ncd Get_Inst.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Get_Inst.twx Get_Inst.ncd -o Get_Inst.twr Get_Inst.pcf 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-fgg484-3 Get_Inst.ngc Get_Inst.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Get_Inst_map.ncd Get_Inst.ngd Get_Inst.pcf 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-fgg484-3 Get_Inst.ngc Get_Inst.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Get_Inst_map.ncd Get_Inst.ngd Get_Inst.pcf 
+par -w -intstyle ise -ol high -mt off Get_Inst_map.ncd Get_Inst.ncd Get_Inst.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Get_Inst.twx Get_Inst.ncd -o Get_Inst.twr Get_Inst.pcf 
+bitgen -intstyle ise -f Get_Inst.ut Get_Inst.ncd 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-fgg484-3 Get_Inst.ngc Get_Inst.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Get_Inst_map.ncd Get_Inst.ngd Get_Inst.pcf 
+par -w -intstyle ise -ol high -mt off Get_Inst_map.ncd Get_Inst.ncd Get_Inst.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Get_Inst.twx Get_Inst.ncd -o Get_Inst.twr Get_Inst.pcf 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-fgg484-3 Get_Inst.ngc Get_Inst.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Get_Inst_map.ncd Get_Inst.ngd Get_Inst.pcf 
+par -w -intstyle ise -ol high -mt off Get_Inst_map.ncd Get_Inst.ncd Get_Inst.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Get_Inst.twx Get_Inst.ncd -o Get_Inst.twr Get_Inst.pcf 
+bitgen -intstyle ise -f Get_Inst.ut Get_Inst.ncd 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Get_Inst.ucf -p xc7a100t-fgg484-3 Get_Inst.ngc Get_Inst.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Get_Inst_map.ncd Get_Inst.ngd Get_Inst.pcf 
+par -w -intstyle ise -ol high -mt off Get_Inst_map.ncd Get_Inst.ncd Get_Inst.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Get_Inst.twx Get_Inst.ncd -o Get_Inst.twr Get_Inst.pcf -ucf Get_Inst.ucf 
+bitgen -intstyle ise -f Get_Inst.ut Get_Inst.ncd 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Get_Inst.ucf -p xc7a100t-fgg484-3 Get_Inst.ngc Get_Inst.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Get_Inst_map.ncd Get_Inst.ngd Get_Inst.pcf 
+par -w -intstyle ise -ol high -mt off Get_Inst_map.ncd Get_Inst.ncd Get_Inst.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Get_Inst.twx Get_Inst.ncd -o Get_Inst.twr Get_Inst.pcf -ucf Get_Inst.ucf 
+bitgen -intstyle ise -f Get_Inst.ut Get_Inst.ncd 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Get_Inst.ucf -p xc7a100t-fgg484-3 Get_Inst.ngc Get_Inst.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Get_Inst_map.ncd Get_Inst.ngd Get_Inst.pcf 
+par -w -intstyle ise -ol high -mt off Get_Inst_map.ncd Get_Inst.ncd Get_Inst.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Get_Inst.twx Get_Inst.ncd -o Get_Inst.twr Get_Inst.pcf -ucf Get_Inst.ucf 
+bitgen -intstyle ise -f Get_Inst.ut Get_Inst.ncd 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Get_Inst.ucf -p xc7a100t-fgg484-3 Get_Inst.ngc Get_Inst.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Get_Inst_map.ncd Get_Inst.ngd Get_Inst.pcf 
+par -w -intstyle ise -ol high -mt off Get_Inst_map.ncd Get_Inst.ncd Get_Inst.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Get_Inst.twx Get_Inst.ncd -o Get_Inst.twr Get_Inst.pcf -ucf Get_Inst.ucf 
+bitgen -intstyle ise -f Get_Inst.ut Get_Inst.ncd 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Get_Inst.ucf -p xc7a100t-fgg484-3 Get_Inst.ngc Get_Inst.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Get_Inst_map.ncd Get_Inst.ngd Get_Inst.pcf 
+par -w -intstyle ise -ol high -mt off Get_Inst_map.ncd Get_Inst.ncd Get_Inst.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Get_Inst.twx Get_Inst.ncd -o Get_Inst.twr Get_Inst.pcf -ucf Get_Inst.ucf 
+bitgen -intstyle ise -f Get_Inst.ut Get_Inst.ncd 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Get_Inst.ucf -p xc7a100t-fgg484-3 Get_Inst.ngc Get_Inst.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Get_Inst_map.ncd Get_Inst.ngd Get_Inst.pcf 
+par -w -intstyle ise -ol high -mt off Get_Inst_map.ncd Get_Inst.ncd Get_Inst.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Get_Inst.twx Get_Inst.ncd -o Get_Inst.twr Get_Inst.pcf -ucf Get_Inst.ucf 
+bitgen -intstyle ise -f Get_Inst.ut Get_Inst.ncd 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Get_Inst/Get_Inst.xst" -ofn "E:/ISE/Term_PC/Get_Inst/Get_Inst.syr" 

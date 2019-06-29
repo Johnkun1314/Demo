@@ -1,0 +1,206 @@
+(edif fulladder
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2019 4 4 10 4 44)
+      (program "Xilinx ngc2edif" (version "P.20131013"))
+      (author "Xilinx. Inc ")
+      (comment "This EDIF netlist is to be used within supported synthesis tools")
+      (comment "for determining resource/timing estimates of the design component")
+      (comment "represented by this netlist.")
+      (comment "Command line: -mdp2sp -w -secure fulladder.ngc fulladder.edif ")))
+  (external UNISIMS
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell LUT3
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I0
+              (direction INPUT)
+            )
+            (port I1
+              (direction INPUT)
+            )
+            (port I2
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell IBUF
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell OBUF
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+  )
+
+  (library fulladder_lib
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell fulladder
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port a
+              (direction INPUT)
+            )
+            (port b
+              (direction INPUT)
+            )
+            (port c0
+              (direction INPUT)
+            )
+            (port c1
+              (direction OUTPUT)
+            )
+            (port f
+              (direction OUTPUT)
+            )
+            (designator "xc7a100t-3-fgg484")
+            (property TYPE (string "fulladder") (owner "Xilinx"))
+            (property SHREG_MIN_SIZE (string "2") (owner "Xilinx"))
+            (property SHREG_EXTRACT_NGC (string "YES") (owner "Xilinx"))
+            (property NLW_UNIQUE_ID (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_TAG (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_ALIAS (string "fulladder_fulladder") (owner "Xilinx"))
+          )
+          (contents
+            (instance c11
+              (viewRef view_1 (cellRef LUT3 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property PK_HLUTNM (string "___XLNM___0___c11") (owner "Xilinx"))
+              (property INIT (string "E8") (owner "Xilinx"))
+            )
+            (instance f1
+              (viewRef view_1 (cellRef LUT3 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property PK_HLUTNM (string "___XLNM___0___c11") (owner "Xilinx"))
+              (property INIT (string "96") (owner "Xilinx"))
+            )
+            (instance (rename a_IBUF_renamed_0 "a_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename b_IBUF_renamed_1 "b_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename c0_IBUF_renamed_2 "c0_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename c1_OBUF_renamed_3 "c1_OBUF")
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename f_OBUF_renamed_4 "f_OBUF")
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (net a_IBUF
+              (joined
+                (portRef I2 (instanceRef c11))
+                (portRef I0 (instanceRef f1))
+                (portRef O (instanceRef a_IBUF_renamed_0))
+              )
+            )
+            (net b_IBUF
+              (joined
+                (portRef I0 (instanceRef c11))
+                (portRef I2 (instanceRef f1))
+                (portRef O (instanceRef b_IBUF_renamed_1))
+              )
+            )
+            (net c0_IBUF
+              (joined
+                (portRef I1 (instanceRef c11))
+                (portRef I1 (instanceRef f1))
+                (portRef O (instanceRef c0_IBUF_renamed_2))
+              )
+            )
+            (net c1_OBUF
+              (joined
+                (portRef O (instanceRef c11))
+                (portRef I (instanceRef c1_OBUF_renamed_3))
+              )
+            )
+            (net f_OBUF
+              (joined
+                (portRef O (instanceRef f1))
+                (portRef I (instanceRef f_OBUF_renamed_4))
+              )
+            )
+            (net a
+              (joined
+                (portRef a)
+                (portRef I (instanceRef a_IBUF_renamed_0))
+              )
+            )
+            (net b
+              (joined
+                (portRef b)
+                (portRef I (instanceRef b_IBUF_renamed_1))
+              )
+            )
+            (net c0
+              (joined
+                (portRef c0)
+                (portRef I (instanceRef c0_IBUF_renamed_2))
+              )
+            )
+            (net c1
+              (joined
+                (portRef c1)
+                (portRef O (instanceRef c1_OBUF_renamed_3))
+              )
+            )
+            (net f
+              (joined
+                (portRef f)
+                (portRef O (instanceRef f_OBUF_renamed_4))
+              )
+            )
+          )
+      )
+    )
+  )
+
+  (design fulladder
+    (cellRef fulladder
+      (libraryRef fulladder_lib)
+    )
+    (property PART (string "xc7a100t-3-fgg484") (owner "Xilinx"))
+  )
+)
+

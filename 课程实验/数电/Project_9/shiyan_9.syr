@@ -1,0 +1,434 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.41 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.41 secs
+ 
+--> Reading design: shiyan_9.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "shiyan_9.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "shiyan_9"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-fgg484
+
+---- Source Options
+Top Module Name                    : shiyan_9
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\FPGA\shiyan_9\shiyan_9.v" into library work
+Parsing module <shiyan_9>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <shiyan_9>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <shiyan_9>.
+    Related source file is "D:\FPGA\shiyan_9\shiyan_9.v".
+    Found 1-bit register for signal <qb>.
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <shiyan_9> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 2
+ 1-bit register                                        : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    q in unit <shiyan_9>
+    qb in unit <shiyan_9>
+
+
+Optimizing unit <shiyan_9> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block shiyan_9, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : shiyan_9.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 9
+#      INV                         : 5
+#      LUT2                        : 1
+#      LUT3                        : 2
+#      VCC                         : 1
+# FlipFlops/Latches                : 6
+#      FDC                         : 2
+#      FDP                         : 2
+#      LDC                         : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 5
+#      IBUF                        : 3
+#      OBUF                        : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tfgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               6  out of  126800     0%  
+ Number of Slice LUTs:                    8  out of  63400     0%  
+    Number used as Logic:                 8  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     14
+   Number with an unused Flip Flop:       8  out of     14    57%  
+   Number with an unused LUT:             6  out of     14    42%  
+   Number of fully used LUT-FF pairs:     0  out of     14     0%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    285     2%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clr                                | IBUF+BUFG              | 1     |
+clk                                | BUFGP                  | 4     |
+pre                                | IBUF+BUFG              | 1     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 1.114ns
+   Maximum output required time after clock: 1.360ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clr'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.036ns (Levels of Logic = 2)
+  Source:            pre (PAD)
+  Destination:       qb_LDC (LATCH)
+  Destination Clock: clr rising
+
+  Data Path: pre to qb_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.284  pre_IBUF (pre_IBUF)
+     INV:I->O              3   0.113   0.289  pre_IBUF_BUFG_LUT1_INV_0 (pre_IBUF_BUFG_LUT1)
+     LDC:CLR                   0.349          qb_LDC
+    ----------------------------------------
+    Total                      1.036ns (0.463ns logic, 0.573ns route)
+                                       (44.7% logic, 55.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 9 / 8
+-------------------------------------------------------------------------
+Offset:              1.114ns (Levels of Logic = 2)
+  Source:            clr (PAD)
+  Destination:       q_C (FF)
+  Destination Clock: clk rising
+
+  Data Path: clr to q_C
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.383  clr_IBUF (clr_IBUF)
+     LUT2:I0->O            2   0.097   0.283  clr_pre_AND_2_o1 (clr_pre_AND_2_o)
+     FDC:CLR                   0.349          q_C
+    ----------------------------------------
+    Total                      1.114ns (0.447ns logic, 0.667ns route)
+                                       (40.1% logic, 59.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'pre'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.114ns (Levels of Logic = 2)
+  Source:            clr (PAD)
+  Destination:       q_LDC (LATCH)
+  Destination Clock: pre rising
+
+  Data Path: clr to q_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.383  clr_IBUF (clr_IBUF)
+     LUT2:I0->O            2   0.097   0.283  clr_pre_AND_2_o1 (clr_pre_AND_2_o)
+     LDC:CLR                   0.349          q_LDC
+    ----------------------------------------
+    Total                      1.114ns (0.447ns logic, 0.667ns route)
+                                       (40.1% logic, 59.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'pre'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.360ns (Levels of Logic = 2)
+  Source:            q_LDC (LATCH)
+  Destination:       q (PAD)
+  Source Clock:      pre rising
+
+  Data Path: q_LDC to q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.472   0.511  q_LDC (q_LDC)
+     LUT3:I0->O            1   0.097   0.279  q1 (q_OBUF)
+     OBUF:I->O                 0.000          q_OBUF (q)
+    ----------------------------------------
+    Total                      1.360ns (0.569ns logic, 0.791ns route)
+                                       (41.9% logic, 58.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 4 / 2
+-------------------------------------------------------------------------
+Offset:              1.117ns (Levels of Logic = 2)
+  Source:            q_P (FF)
+  Destination:       q (PAD)
+  Source Clock:      clk rising
+
+  Data Path: q_P to q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.361   0.379  q_P (q_P)
+     LUT3:I1->O            1   0.097   0.279  q1 (q_OBUF)
+     OBUF:I->O                 0.000          q_OBUF (q)
+    ----------------------------------------
+    Total                      1.117ns (0.458ns logic, 0.659ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clr'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.360ns (Levels of Logic = 2)
+  Source:            qb_LDC (LATCH)
+  Destination:       qb (PAD)
+  Source Clock:      clr rising
+
+  Data Path: qb_LDC to qb
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.472   0.511  qb_LDC (qb_LDC)
+     LUT3:I0->O            1   0.097   0.279  qb1 (qb_OBUF)
+     OBUF:I->O                 0.000          qb_OBUF (qb)
+    ----------------------------------------
+    Total                      1.360ns (0.569ns logic, 0.791ns route)
+                                       (41.9% logic, 58.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 30.50 secs
+ 
+--> 
+
+Total memory usage is 4684668 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

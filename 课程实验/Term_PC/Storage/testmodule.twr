@@ -1,0 +1,154 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml testmodule.twx testmodule.ncd -o testmodule.twr
+testmodule.pcf -ucf testmodule.ucf
+
+Design file:              testmodule.ncd
+Physical constraint file: testmodule.pcf
+Device,package,speed:     xc7a100t,fgg484,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock SW<1>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+SW<6>       |   -0.397(R)|      FAST  |    2.707(R)|      SLOW  |SW_1_BUFGP        |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock SW<2>
+-------------+------------+------------+------------+------------+------------------+--------+
+             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source       | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+-------------+------------+------------+------------+------------+------------------+--------+
+Data_Input<1>|   -0.501(F)|      FAST  |    2.353(F)|      SLOW  |SW_2_BUFGP        |   0.000|
+Data_Input<2>|   -0.519(F)|      FAST  |    2.381(F)|      SLOW  |SW_2_BUFGP        |   0.000|
+Data_Input<3>|   -0.397(F)|      FAST  |    2.188(F)|      SLOW  |SW_2_BUFGP        |   0.000|
+Data_Input<4>|   -0.808(F)|      FAST  |    2.728(F)|      SLOW  |SW_2_BUFGP        |   0.000|
+Data_Input<5>|   -0.862(F)|      FAST  |    2.811(F)|      SLOW  |SW_2_BUFGP        |   0.000|
+Data_Input<6>|   -1.119(F)|      FAST  |    3.155(F)|      SLOW  |SW_2_BUFGP        |   0.000|
+-------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock SW<3>
+--------------+------------+------------+------------+------------+------------------+--------+
+              |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source        | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+--------------+------------+------------+------------+------------+------------------+--------+
+Data_Input<1> |    0.080(F)|      FAST  |    1.635(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<2> |    0.062(F)|      FAST  |    1.663(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<3> |    0.130(F)|      FAST  |    1.529(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<4> |   -0.162(F)|      FAST  |    1.913(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<5> |   -0.273(F)|      FAST  |    2.070(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<6> |   -0.472(F)|      FAST  |    2.340(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<7> |   -1.056(F)|      FAST  |    3.279(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<8> |   -1.066(F)|      FAST  |    3.286(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<9> |   -1.014(F)|      FAST  |    3.233(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<10>|   -1.010(F)|      FAST  |    3.229(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<11>|   -1.010(F)|      FAST  |    3.230(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<12>|   -1.008(F)|      FAST  |    3.228(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<13>|   -1.044(F)|      FAST  |    3.267(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<14>|   -1.055(F)|      FAST  |    3.278(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<15>|   -1.009(F)|      FAST  |    3.230(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<16>|   -1.033(F)|      FAST  |    3.255(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<17>|   -1.039(F)|      FAST  |    3.263(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<18>|   -1.044(F)|      FAST  |    3.266(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<19>|   -1.043(F)|      FAST  |    3.266(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<20>|   -1.057(F)|      FAST  |    3.280(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<21>|   -1.056(F)|      FAST  |    3.279(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<22>|   -1.079(F)|      FAST  |    3.302(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<23>|   -1.081(F)|      FAST  |    3.304(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<24>|   -1.081(F)|      FAST  |    3.303(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<25>|   -1.067(F)|      FAST  |    3.287(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<26>|   -1.033(F)|      FAST  |    3.250(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<27>|   -1.035(F)|      FAST  |    3.252(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<28>|   -1.041(F)|      FAST  |    3.257(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<29>|   -1.060(F)|      FAST  |    3.282(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<30>|   -1.077(F)|      FAST  |    3.293(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<31>|   -1.055(F)|      FAST  |    3.277(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+Data_Input<32>|   -1.081(F)|      FAST  |    3.304(F)|      SLOW  |SW_3_BUFGP        |   0.000|
+--------------+------------+------------+------------+------------+------------------+--------+
+
+Clock SW<1> to Pad
+---------------+-----------------+------------+-----------------+------------+------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+---------------+-----------------+------------+-----------------+------------+------------------+--------+
+Data_Output<1> |        10.520(R)|      SLOW  |         4.572(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<2> |        10.365(R)|      SLOW  |         4.459(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<3> |        10.298(R)|      SLOW  |         4.445(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<4> |        10.578(R)|      SLOW  |         4.607(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<5> |        10.626(R)|      SLOW  |         4.609(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<6> |        10.446(R)|      SLOW  |         4.550(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<7> |        10.299(R)|      SLOW  |         4.479(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<8> |        10.878(R)|      SLOW  |         4.756(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<9> |        10.893(R)|      SLOW  |         4.757(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<10>|        10.821(R)|      SLOW  |         4.732(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<11>|        10.902(R)|      SLOW  |         4.784(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<12>|        10.795(R)|      SLOW  |         4.706(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<13>|        10.751(R)|      SLOW  |         4.696(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<14>|        10.747(R)|      SLOW  |         4.674(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<15>|        10.746(R)|      SLOW  |         4.709(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<16>|        10.764(R)|      SLOW  |         4.684(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<17>|        10.882(R)|      SLOW  |         4.778(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<18>|        10.557(R)|      SLOW  |         4.586(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<19>|        10.769(R)|      SLOW  |         4.717(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<20>|        10.531(R)|      SLOW  |         4.589(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<21>|        10.980(R)|      SLOW  |         4.826(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<22>|        10.873(R)|      SLOW  |         4.750(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<23>|        10.928(R)|      SLOW  |         4.779(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<24>|        10.736(R)|      SLOW  |         4.660(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<25>|        10.717(R)|      SLOW  |         4.680(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<26>|        10.552(R)|      SLOW  |         4.593(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<27>|        10.445(R)|      SLOW  |         4.548(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<28>|        10.512(R)|      SLOW  |         4.582(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<29>|        10.147(R)|      SLOW  |         4.380(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<30>|        10.203(R)|      SLOW  |         4.423(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<31>|        10.150(R)|      SLOW  |         4.371(R)|      FAST  |SW_1_BUFGP        |   0.000|
+Data_Output<32>|        10.313(R)|      SLOW  |         4.482(R)|      FAST  |SW_1_BUFGP        |   0.000|
+---------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock SW<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+SW<2>          |         |    2.153|         |         |
+SW<3>          |         |    2.215|         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Wed Apr 17 22:33:34 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5004 MB
+
+
+

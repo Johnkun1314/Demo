@@ -1,0 +1,28 @@
+Command line:
+   shiyan_13_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51434
+
+Fri Nov 30 17:22:06 2018
+
+
+ Elaboration Time: 0.140625 sec
+
+ Current Memory Usage: 5338.48 Meg
+
+ Total Signals          : 19
+ Total Nets             : 27
+ Total Signal Drivers   : 7
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 9
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 112
+
+ Total Simulation Time: 0.15625 sec
+
+ Current Memory Usage: 5653.05 Meg
+
+Fri Nov 30 17:22:36 2018
+

@@ -1,0 +1,70 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Get_Inst.ucf -p
+xc7a100t-fgg484-3 Test.ngc Test.ngd
+
+Reading NGO file "E:/ISE/Term_PC/Get_Inst/Test.ngc" ...
+Loading design module "ipcore_dir/Inst_Rom.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "Get_Inst.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/wea<0>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<31>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<30>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<29>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<28>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<27>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<26>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<25>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<24>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<23>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<22>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<21>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<20>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<19>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<18>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<17>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<16>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<15>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<14>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<13>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<12>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<11>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<10>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<9>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<8>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<7>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<6>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<5>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<4>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<3>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<2>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<1>' has no driver
+WARNING:NgdBuild:452 - logical net 'Get_Inst/Inst_Rom/dina<0>' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  33
+
+Total memory usage is 4484256 kilobytes
+
+Writing NGD file "Test.ngd" ...
+Total REAL time to NGDBUILD completion:  14 sec
+Total CPU time to NGDBUILD completion:   14 sec
+
+Writing NGDBUILD log file "Test.bld"...

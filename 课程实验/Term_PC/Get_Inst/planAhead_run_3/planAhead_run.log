@@ -1,0 +1,85 @@
+
+****** PlanAhead v14.7
+  **** Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source E:/ISE/Term_PC/Get_Inst/pa.fromNetlist.tcl
+# create_project -name Get_Inst -dir "E:/ISE/Term_PC/Get_Inst/planAhead_run_3" -part xc7a100tfgg484-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "E:/ISE/Term_PC/Get_Inst/Test.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {E:/ISE/Term_PC/Get_Inst} {ipcore_dir} }
+# add_files [list {ipcore_dir/Inst_Rom.ncf}] -fileset [get_property constrset [current_run]]
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "Get_Inst.ucf" [current_fileset -constrset]
+Adding file 'E:/ISE/Term_PC/Get_Inst/Get_Inst.ucf' to fileset 'constrs_1'
+# add_files [list {Get_Inst.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc7a100tfgg484-3
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design Test.ngc ...
+WARNING:NetListWriters:298 - No output is written to Test.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus Get_Inst/PC<5 : 0> on block Test is not
+   reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file Test.edif ...
+ngc2edif: Total memory usage is 84292 kilobytes
+
+Parsing EDIF File [./planAhead_run_3/Get_Inst.data/cache/Test_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_3/Get_Inst.data/cache/Test_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design Inst_Rom.ngc ...
+WARNING:NetListWriters:298 - No output is written to Inst_Rom.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file Inst_Rom.edif ...
+ngc2edif: Total memory usage is 82860 kilobytes
+
+Reading core file 'E:/ISE/Term_PC/Get_Inst/ipcore_dir/Inst_Rom.ngc' for (cell view 'Inst_Rom', library 'Test_lib', file 'Test.ngc')
+Parsing EDIF File [./planAhead_run_3/Get_Inst.data/cache/Inst_Rom_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_3/Get_Inst.data/cache/Inst_Rom_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/fgg484/Package.xml
+Loading io standards from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : D:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/drc.xml
+Parsing UCF File [E:/ISE/Term_PC/Get_Inst/ipcore_dir/Inst_Rom.ncf]
+Finished Parsing UCF File [E:/ISE/Term_PC/Get_Inst/ipcore_dir/Inst_Rom.ncf]
+Parsing UCF File [E:/ISE/Term_PC/Get_Inst/Get_Inst.ucf]
+Finished Parsing UCF File [E:/ISE/Term_PC/Get_Inst/Get_Inst.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+  FDR => FDRE: 4 instances
+
+Phase 0 | Netlist Checksum: 1d0b9a25
+link_design: Time (s): elapsed = 00:00:21 . Memory (MB): peak = 758.816 ; gain = 310.016
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu May 09 11:46:01 2019...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "E:/ISE/Term_PC/FullAdderPlugs/fulladderplugs.xst" -ofn "E:/ISE/Term_PC/FullAdderPlugs/fulladderplugs.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/FullAdderPlugs/fulladderplugs.xst" -ofn "E:/ISE/Term_PC/FullAdderPlugs/fulladderplugs.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/FullAdderPlugs/fulladderplugs.xst" -ofn "E:/ISE/Term_PC/FullAdderPlugs/fulladderplugs.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm test_fulladderplugs.bmm -p xc7a100t-fgg484-3 fulladderplugs.ngc fulladderplugs.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o fulladderplugs_map.ncd fulladderplugs.ngd fulladderplugs.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fulladderplugs.ucf -bm test_fulladderplugs.bmm -p xc7a100t-fgg484-3 fulladderplugs.ngc fulladderplugs.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o fulladderplugs_map.ncd fulladderplugs.ngd fulladderplugs.pcf 
+par -w -intstyle ise -ol high -mt off fulladderplugs_map.ncd fulladderplugs.ncd fulladderplugs.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml fulladderplugs.twx fulladderplugs.ncd -o fulladderplugs.twr fulladderplugs.pcf -ucf fulladderplugs.ucf 
+bitgen -intstyle ise -f fulladderplugs.ut fulladderplugs.ncd 

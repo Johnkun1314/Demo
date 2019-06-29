@@ -1,0 +1,28 @@
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc CPU_R_I.ucf -p xc7a100t-fgg484-3 CPU_R_I.ngc CPU_R_I.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o CPU_R_I_map.ncd CPU_R_I.ngd CPU_R_I.pcf 
+par -w -intstyle ise -ol high -mt off CPU_R_I_map.ncd CPU_R_I.ncd CPU_R_I.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU_R_I.twx CPU_R_I.ncd -o CPU_R_I.twr CPU_R_I.pcf -ucf CPU_R_I.ucf 
+bitgen -intstyle ise -f CPU_R_I.ut CPU_R_I.ncd 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc CPU_R_I.ucf -p xc7a100t-fgg484-3 CPU_R_I.ngc CPU_R_I.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o CPU_R_I_map.ncd CPU_R_I.ngd CPU_R_I.pcf 
+par -w -intstyle ise -ol high -mt off CPU_R_I_map.ncd CPU_R_I.ncd CPU_R_I.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU_R_I.twx CPU_R_I.ncd -o CPU_R_I.twr CPU_R_I.pcf -ucf CPU_R_I.ucf 
+bitgen -intstyle ise -f CPU_R_I.ut CPU_R_I.ncd 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.xst" -ofn "E:/ISE/Term_PC/CPU_R_I/CPU_R_I.syr" 

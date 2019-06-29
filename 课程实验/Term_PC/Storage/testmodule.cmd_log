@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Storage/testmodule.xst" -ofn "E:/ISE/Term_PC/Storage/testmodule.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Storage/testmodule.xst" -ofn "E:/ISE/Term_PC/Storage/testmodule.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Storage/testmodule.xst" -ofn "E:/ISE/Term_PC/Storage/testmodule.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Storage/testmodule.xst" -ofn "E:/ISE/Term_PC/Storage/testmodule.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc testmodule.ucf -p xc7a100t-fgg484-3 testmodule.ngc testmodule.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o testmodule_map.ncd testmodule.ngd testmodule.pcf 
+par -w -intstyle ise -ol high -mt off testmodule_map.ncd testmodule.ncd testmodule.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testmodule.twx testmodule.ncd -o testmodule.twr testmodule.pcf -ucf testmodule.ucf 
+bitgen -intstyle ise -f testmodule.ut testmodule.ncd 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Storage/testmodule.xst" -ofn "E:/ISE/Term_PC/Storage/testmodule.syr" 
+xst -intstyle ise -ifn "E:/ISE/Term_PC/Storage/testmodule.xst" -ofn "E:/ISE/Term_PC/Storage/testmodule.syr" 

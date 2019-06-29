@@ -1,0 +1,23 @@
+xst -intstyle ise -ifn "E:/ISE/Project_8/Demo_8.xst" -ofn "E:/ISE/Project_8/Demo_8.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_8/Demo_8.xst" -ofn "E:/ISE/Project_8/Demo_8.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_8/Demo_8.xst" -ofn "E:/ISE/Project_8/Demo_8.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_8/Demo_8.xst" -ofn "E:/ISE/Project_8/Demo_8.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_8/Demo_8.xst" -ofn "E:/ISE/Project_8/Demo_8.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_8/Demo_8.xst" -ofn "E:/ISE/Project_8/Demo_8.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_8/Demo_8.xst" -ofn "E:/ISE/Project_8/Demo_8.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_8/Demo_8.xst" -ofn "E:/ISE/Project_8/Demo_8.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Demo_8.ucf -p xc7a100t-fgg484-3 Demo_8.ngc Demo_8.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Demo_8_map.ncd Demo_8.ngd Demo_8.pcf 
+par -w -intstyle ise -ol high -mt off Demo_8_map.ncd Demo_8.ncd Demo_8.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Demo_8.twx Demo_8.ncd -o Demo_8.twr Demo_8.pcf -ucf Demo_8.ucf 
+bitgen -intstyle ise -f Demo_8.ut Demo_8.ncd 
+bitgen -intstyle ise -f Demo_8.ut Demo_8.ncd 
+xst -intstyle ise -ifn "E:/ISE/Project_8/Demo_8.xst" -ofn "E:/ISE/Project_8/Demo_8.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_8/Demo_8.xst" -ofn "E:/ISE/Project_8/Demo_8.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_8/Demo_8.xst" -ofn "E:/ISE/Project_8/Demo_8.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_8/Demo_8.xst" -ofn "E:/ISE/Project_8/Demo_8.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Demo_8.ucf -p xc7a100t-fgg484-3 Demo_8.ngc Demo_8.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Demo_8_map.ncd Demo_8.ngd Demo_8.pcf 
+par -w -intstyle ise -ol high -mt off Demo_8_map.ncd Demo_8.ncd Demo_8.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Demo_8.twx Demo_8.ncd -o Demo_8.twr Demo_8.pcf -ucf Demo_8.ucf 
+bitgen -intstyle ise -f Demo_8.ut Demo_8.ncd 

@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "D:/FPGA/shiyan_13/shiyan_13.xst" -ofn "D:/FPGA/shiyan_13/shiyan_13.syr" 
+xst -intstyle ise -ifn "D:/FPGA/shiyan_13/shiyan_13.xst" -ofn "D:/FPGA/shiyan_13/shiyan_13.syr" 
+xst -intstyle ise -ifn "D:/FPGA/shiyan_13/shiyan_13.xst" -ofn "D:/FPGA/shiyan_13/shiyan_13.syr" 
+xst -intstyle ise -ifn "D:/FPGA/shiyan_13/shiyan_13.xst" -ofn "D:/FPGA/shiyan_13/shiyan_13.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc shiyan_13.ucf -p xc7a100t-fgg484-3 shiyan_13.ngc shiyan_13.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o shiyan_13_map.ncd shiyan_13.ngd shiyan_13.pcf 
+par -w -intstyle ise -ol high -mt off shiyan_13_map.ncd shiyan_13.ncd shiyan_13.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml shiyan_13.twx shiyan_13.ncd -o shiyan_13.twr shiyan_13.pcf -ucf shiyan_13.ucf 
+bitgen -intstyle ise -f shiyan_13.ut shiyan_13.ncd 
+bitgen -intstyle ise -f shiyan_13.ut shiyan_13.ncd 
+xst -intstyle ise -ifn "E:/ISE/Project_13/shiyan_13.xst" -ofn "E:/ISE/Project_13/shiyan_13.syr" 

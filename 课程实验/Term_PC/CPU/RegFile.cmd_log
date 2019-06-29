@@ -1,0 +1,18 @@
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/RegFile.v -lang verilog -prj CPU -o RegFile.spl -module RegFile -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 RegFile.spl E:/ISE/Term_PC/CPU/RegFile.sym 
+vhdtdtfi -lang verilog -prj CPU -o E:/ISE/Term_PC/CPU/RegFile.tfi -lib work E:/ISE/Term_PC/CPU//RegFile.v -module RegFile -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/RegFile.v -lang verilog -prj CPU -o RegFile.spl -module RegFile -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 RegFile.spl E:/ISE/Term_PC/CPU/RegFile.sym 
+vhdtdtfi -lang verilog -prj CPU -o E:/ISE/Term_PC/CPU/RegFile.tfi -lib work E:/ISE/Term_PC/CPU//RegFile.v -module RegFile -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/RegFile.v -lang verilog -prj CPU -o RegFile.spl -module RegFile -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 RegFile.spl E:/ISE/Term_PC/CPU/RegFile.sym 
+vhdtdtfi -lang verilog -prj CPU -o E:/ISE/Term_PC/CPU/RegFile.tfi -lib work E:/ISE/Term_PC/CPU//RegFile.v -module RegFile -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/RegFile.v -lang verilog -prj CPU -o RegFile.spl -module RegFile -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 RegFile.spl E:/ISE/Term_PC/CPU/RegFile.sym 
+vhdtdtfi -lang verilog -prj CPU -o E:/ISE/Term_PC/CPU/RegFile.tfi -lib work E:/ISE/Term_PC/CPU//RegFile.v -module RegFile -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/RegFile.v -lang verilog -prj CPU -o RegFile.spl -module RegFile -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 RegFile.spl E:/ISE/Term_PC/CPU/RegFile.sym 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/RegFile.v -lang verilog -prj CPU -o RegFile.spl -module RegFile -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 RegFile.spl E:/ISE/Term_PC/CPU/RegFile.sym 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/RegFile.v -lang verilog -prj CPU -o RegFile.spl -module RegFile -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 RegFile.spl E:/ISE/Term_PC/CPU/RegFile.sym 

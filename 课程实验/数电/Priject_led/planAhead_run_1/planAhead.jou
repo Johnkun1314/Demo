@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Tue Dec 18 21:00:50 2018
+# Process ID: 10864
+# Log file: E:/ISE/Priject_led/planAhead_run_1/planAhead.log
+# Journal file: E:/ISE/Priject_led/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/ISE/Priject_led/pa.fromNetlist.tcl
+set_property iostandard LVCMOS18 [get_ports [list {led[7]} {led[6]} {led[5]} {led[4]} {led[3]} {led[2]} {led[1]} {led[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {sw[1]} {sw[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {sw[1]} {sw[0]}]]
+startgroup
+set_property package_pin R1 [get_ports {led[7]}]
+endgroup
+startgroup
+set_property package_pin P2 [get_ports {led[6]}]
+endgroup
+startgroup
+set_property package_pin P1 [get_ports {led[5]}]
+endgroup
+startgroup
+set_property package_pin N2 [get_ports {led[4]}]
+endgroup
+startgroup
+set_property package_pin M1 [get_ports {led[3]}]
+endgroup
+startgroup
+set_property package_pin M2 [get_ports {led[2]}]
+endgroup
+startgroup
+set_property package_pin L1 [get_ports {led[1]}]
+endgroup
+startgroup
+set_property package_pin J2 [get_ports {led[0]}]
+endgroup
+startgroup
+set_property package_pin T3 [get_ports {sw[1]}]
+endgroup
+startgroup
+set_property package_pin U3 [get_ports {sw[0]}]
+endgroup
+set_property iostandard LVCMOS18 [get_ports [list clk]]
+set_property iostandard LVCMOS18 [get_ports [list rst]]
+startgroup
+set_property package_pin H4 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin AA8 [get_ports rst]
+endgroup
+save_constraints

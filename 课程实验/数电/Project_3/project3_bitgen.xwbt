@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\ISE\Project_3\project3.ncd
+OUTFILE=E:\ISE\Project_3\project3.bit
+FAMILY=Artix7
+PART=xc7a100t-3fgg484
+WORKINGDIR=E:\ISE\Project_3
+LICENSE=WebPack
+USER_INFO=__0_0_0

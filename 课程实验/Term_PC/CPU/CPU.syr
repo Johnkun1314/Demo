@@ -1,0 +1,2461 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.40 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.40 secs
+ 
+--> Reading design: CPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-fgg484
+
+---- Source Options
+Top Module Name                    : CPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\ISE\Term_PC\CPU\ipcore_dir\RAM_B.v" into library work
+Parsing module <RAM_B>.
+Analyzing Verilog file "E:\ISE\Term_PC\CPU\yimaqi.v" into library work
+Parsing module <yimaqi>.
+Analyzing Verilog file "E:\ISE\Term_PC\CPU\RegFile.v" into library work
+Parsing module <RegFile>.
+Analyzing Verilog file "E:\ISE\Term_PC\CPU\Get_Inst.v" into library work
+Parsing module <Get_Inst>.
+Analyzing Verilog file "E:\ISE\Term_PC\CPU\ALU.v" into library work
+Parsing module <ALU>.
+Analyzing Verilog file "E:\ISE\Term_PC\CPU\CPU.v" into library work
+Parsing module <CPU>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <CPU>.
+
+Elaborating module <RegFile>.
+
+Elaborating module <ALU>.
+WARNING:HDLCompiler:1127 - "E:\ISE\Term_PC\CPU\CPU.v" Line 67: Assignment to CF ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\ISE\Term_PC\CPU\CPU.v" Line 69: Assignment to SF ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\ISE\Term_PC\CPU\CPU.v" Line 70: Assignment to PF ignored, since the identifier is never used
+
+Elaborating module <yimaqi>.
+WARNING:HDLCompiler:1016 - "E:\ISE\Term_PC\CPU\Get_Inst.v" Line 10: Port wea is not connected to this instance
+
+Elaborating module <Get_Inst>.
+
+Elaborating module <RAM_B>.
+WARNING:HDLCompiler:1499 - "E:\ISE\Term_PC\CPU\ipcore_dir\RAM_B.v" Line 39: Empty module <RAM_B> remains a black box.
+WARNING:HDLCompiler:552 - "E:\ISE\Term_PC\CPU\Get_Inst.v" Line 10: Input port wea[0] is not connected on this instance
+WARNING:HDLCompiler:1127 - "E:\ISE\Term_PC\CPU\CPU.v" Line 87: Assignment to PC ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <CPU>.
+    Related source file is "E:\ISE\Term_PC\CPU\CPU.v".
+        ADDR = 5
+        SIZE = 32
+WARNING:Xst:647 - Input <SW<5:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\ISE\Term_PC\CPU\CPU.v" line 60: Output port <CF> of the instance <ALU_Test> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\ISE\Term_PC\CPU\CPU.v" line 60: Output port <SF> of the instance <ALU_Test> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\ISE\Term_PC\CPU\CPU.v" line 60: Output port <PF> of the instance <ALU_Test> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\ISE\Term_PC\CPU\CPU.v" line 83: Output port <PC> of the instance <get_inst> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <Output_Data<31>>.
+    Found 1-bit register for signal <Output_Data<30>>.
+    Found 1-bit register for signal <Output_Data<29>>.
+    Found 1-bit register for signal <Output_Data<28>>.
+    Found 1-bit register for signal <Output_Data<27>>.
+    Found 1-bit register for signal <Output_Data<26>>.
+    Found 1-bit register for signal <Output_Data<25>>.
+    Found 1-bit register for signal <Output_Data<24>>.
+    Found 1-bit register for signal <Output_Data<23>>.
+    Found 1-bit register for signal <Output_Data<22>>.
+    Found 1-bit register for signal <Output_Data<21>>.
+    Found 1-bit register for signal <Output_Data<20>>.
+    Found 1-bit register for signal <Output_Data<19>>.
+    Found 1-bit register for signal <Output_Data<18>>.
+    Found 1-bit register for signal <Output_Data<17>>.
+    Found 1-bit register for signal <Output_Data<16>>.
+    Found 1-bit register for signal <Output_Data<15>>.
+    Found 1-bit register for signal <Output_Data<14>>.
+    Found 1-bit register for signal <Output_Data<13>>.
+    Found 1-bit register for signal <Output_Data<12>>.
+    Found 1-bit register for signal <Output_Data<11>>.
+    Found 1-bit register for signal <Output_Data<10>>.
+    Found 1-bit register for signal <Output_Data<9>>.
+    Found 1-bit register for signal <Output_Data<8>>.
+    Found 1-bit register for signal <Output_Data<7>>.
+    Found 1-bit register for signal <Output_Data<6>>.
+    Found 1-bit register for signal <Output_Data<5>>.
+    Found 1-bit register for signal <Output_Data<4>>.
+    Found 1-bit register for signal <Output_Data<3>>.
+    Found 1-bit register for signal <Output_Data<2>>.
+    Found 1-bit register for signal <Output_Data<1>>.
+    Found 1-bit register for signal <Output_Data<0>>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <CPU> synthesized.
+
+Synthesizing Unit <RegFile>.
+    Related source file is "E:\ISE\Term_PC\CPU\RegFile.v".
+        ADDR = 4
+        NUM = 31
+        SIZE = 31
+    Found 1024-bit register for signal <n0047[1023:0]>.
+    Found 32-bit 32-to-1 multiplexer for signal <R_Data_A> created at line 35.
+    Found 32-bit 32-to-1 multiplexer for signal <R_Data_B> created at line 36.
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred  34 Multiplexer(s).
+Unit <RegFile> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "E:\ISE\Term_PC\CPU\ALU.v".
+        SIZE = 32
+    Found 33-bit adder for signal <n0117> created at line 24.
+    Found 33-bit adder for signal <n0121> created at line 25.
+    Found 33-bit adder for signal <GND_3_o_GND_3_o_add_8_OUT> created at line 25.
+    Found 32-bit shifter logical left for signal <B[32]_A[32]_shift_left_10_OUT> created at line 27
+    Found 1-bit 8-to-1 multiplexer for signal <_n0139> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0156> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0173> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0190> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0207> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0224> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0241> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0258> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0275> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0292> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0309> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0326> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0343> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0360> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0377> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0394> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0411> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0428> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0445> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0462> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0479> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0496> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0513> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0530> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0547> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0564> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0581> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0598> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0615> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0632> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0649> created at line 19.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0666> created at line 19.
+    Found 32-bit 8-to-1 multiplexer for signal <_n0683> created at line 29.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <F<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator greater for signal <A[32]_B[32]_LessThan_10_o> created at line 26
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  32 Latch(s).
+	inferred   1 Comparator(s).
+	inferred  35 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <yimaqi>.
+    Related source file is "E:\ISE\Term_PC\CPU\yimaqi.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <ALU_OP<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALU_OP<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALU_OP<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <write_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALU_OP<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   5 Latch(s).
+Unit <yimaqi> synthesized.
+
+Synthesizing Unit <Get_Inst>.
+    Related source file is "E:\ISE\Term_PC\CPU\Get_Inst.v".
+    Found 32-bit register for signal <PC>.
+    Found 32-bit adder for signal <PC[31]_GND_43_o_add_1_OUT> created at line 18.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <Get_Inst> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 33-bit adder                                          : 3
+# Registers                                            : 34
+ 1-bit register                                        : 32
+ 1024-bit register                                     : 1
+ 32-bit register                                       : 1
+# Latches                                              : 37
+ 1-bit latch                                           : 37
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 70
+ 1-bit 8-to-1 multiplexer                              : 32
+ 32-bit 2-to-1 multiplexer                             : 35
+ 32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 8-to-1 multiplexer                             : 1
+# Logic shifters                                       : 1
+ 32-bit shifter logical left                           : 1
+# Xors                                                 : 3
+ 1-bit xor32                                           : 1
+ 1-bit xor4                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/RAM_B.ngc>.
+Loading core <RAM_B> for timing and area information for instance <RAM>.
+WARNING:Xst:1710 - FF/Latch <ALU_OP_3> (without init value) has a constant value of 0 in block <yimaqi>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <Get_Inst>.
+The following registers are absorbed into accumulator <PC>: 1 register on signal <PC>.
+Unit <Get_Inst> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 33-bit adder                                          : 1
+ 33-bit adder carry in                                 : 1
+# Accumulators                                         : 1
+ 32-bit up accumulator                                 : 1
+# Registers                                            : 1056
+ Flip-Flops                                            : 1056
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 101
+ 1-bit 2-to-1 multiplexer                              : 32
+ 1-bit 8-to-1 multiplexer                              : 32
+ 32-bit 2-to-1 multiplexer                             : 34
+ 32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 8-to-1 multiplexer                             : 1
+# Logic shifters                                       : 1
+ 32-bit shifter logical left                           : 1
+# Xors                                                 : 3
+ 1-bit xor32                                           : 1
+ 1-bit xor4                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <ALU_OP_3> (without init value) has a constant value of 0 in block <yimaqi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <get_inst/PC_0> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_1> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_8> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_9> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_10> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_11> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_12> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_13> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_14> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_15> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_16> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_17> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_18> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_19> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_20> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_21> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_22> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_23> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_24> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_25> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_26> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_27> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_28> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_29> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_30> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <get_inst/PC_31> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    Output_Data_31 in unit <CPU>
+    Output_Data_0 in unit <CPU>
+    Output_Data_1 in unit <CPU>
+    Output_Data_2 in unit <CPU>
+    Output_Data_4 in unit <CPU>
+    Output_Data_5 in unit <CPU>
+    Output_Data_3 in unit <CPU>
+    Output_Data_6 in unit <CPU>
+    Output_Data_7 in unit <CPU>
+    Output_Data_8 in unit <CPU>
+    Output_Data_9 in unit <CPU>
+    Output_Data_10 in unit <CPU>
+    Output_Data_11 in unit <CPU>
+    Output_Data_13 in unit <CPU>
+    Output_Data_14 in unit <CPU>
+    Output_Data_12 in unit <CPU>
+    Output_Data_15 in unit <CPU>
+    Output_Data_16 in unit <CPU>
+    Output_Data_17 in unit <CPU>
+    Output_Data_18 in unit <CPU>
+    Output_Data_19 in unit <CPU>
+    Output_Data_20 in unit <CPU>
+    Output_Data_22 in unit <CPU>
+    Output_Data_23 in unit <CPU>
+    Output_Data_21 in unit <CPU>
+    Output_Data_24 in unit <CPU>
+    Output_Data_25 in unit <CPU>
+    Output_Data_27 in unit <CPU>
+    Output_Data_28 in unit <CPU>
+    Output_Data_26 in unit <CPU>
+    Output_Data_29 in unit <CPU>
+    Output_Data_30 in unit <CPU>
+
+
+Optimizing unit <CPU> ...
+
+Optimizing unit <RegFile> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <yimaqi> ...
+WARNING:Xst:1294 - Latch <ALU_Test/F_1> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_2> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_3> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_4> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_6> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_7> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_5> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_8> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_9> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_10> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_11> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_12> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_13> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_15> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_16> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_14> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_17> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_18> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_19> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_20> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_21> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_22> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_24> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_25> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_23> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_26> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_27> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_29> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_30> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_28> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_31> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1294 - Latch <ALU_Test/F_32> is equivalent to a wire in block <CPU>.
+WARNING:Xst:1710 - FF/Latch <RF_Test/REG_Files_31_992> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_993> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_994> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_995> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_996> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_997> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_998> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_999> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1000> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1001> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1002> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1003> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1004> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1005> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1006> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1007> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1008> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1009> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1010> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1011> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1012> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1013> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1014> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1015> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1016> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1017> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1018> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1019> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1020> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1021> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1022> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_Test/REG_Files_31_1023> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1062
+ Flip-Flops                                            : 1062
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : CPU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2377
+#      GND                         : 2
+#      INV                         : 2
+#      LUT1                        : 4
+#      LUT2                        : 119
+#      LUT3                        : 1005
+#      LUT4                        : 76
+#      LUT5                        : 112
+#      LUT6                        : 822
+#      MUXCY                       : 89
+#      MUXF7                       : 73
+#      VCC                         : 2
+#      XORCY                       : 71
+# FlipFlops/Latches                : 1098
+#      FDC                         : 32
+#      FDP                         : 32
+#      FDR                         : 6
+#      FDRE                        : 992
+#      LD                          : 1
+#      LDC                         : 32
+#      LDE                         : 3
+# RAMS                             : 1
+#      RAMB18E1                    : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 35
+#      IBUF                        : 3
+#      OBUF                        : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tfgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1098  out of  126800     0%  
+ Number of Slice LUTs:                 2140  out of  63400     3%  
+    Number used as Logic:              2140  out of  63400     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2175
+   Number with an unused Flip Flop:    1077  out of   2175    49%  
+   Number with an unused LUT:            35  out of   2175     1%  
+   Number of fully used LUT-FF pairs:  1063  out of   2175    48%  
+   Number of unique control sets:       100
+
+IO Utilization: 
+ Number of IOs:                          38
+ Number of bonded IOBs:                  36  out of    285    12%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    135     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------------+----------------------------+-------+
+Clock Signal                                                          | Clock buffer(FF name)      | Load  |
+----------------------------------------------------------------------+----------------------------+-------+
+SW<0>                                                                 | BUFGP                      | 999   |
+yimaqi/OP[5]_GND_37_o_equal_1_o(yimaqi/OP[5]_GND_37_o_equal_1_o<5>1:O)| NONE(*)(yimaqi/write_reg)  | 4     |
+SW[2]_ALU_F[31]_AND_113_o(SW[2]_ALU_F[31]_AND_113_o1:O)               | NONE(*)(Output_Data_30_LDC)| 1     |
+SW<3>                                                                 | IBUF+BUFG                  | 64    |
+SW[2]_ALU_F[30]_AND_115_o(SW[2]_ALU_F[30]_AND_115_o1:O)               | NONE(*)(Output_Data_29_LDC)| 1     |
+SW[2]_ALU_F[27]_AND_121_o(SW[2]_ALU_F[27]_AND_121_o1:O)               | NONE(*)(Output_Data_26_LDC)| 1     |
+SW[2]_ALU_F[29]_AND_117_o(SW[2]_ALU_F[29]_AND_117_o1:O)               | NONE(*)(Output_Data_28_LDC)| 1     |
+SW[2]_ALU_F[28]_AND_119_o(SW[2]_ALU_F[28]_AND_119_o1:O)               | NONE(*)(Output_Data_27_LDC)| 1     |
+SW[2]_ALU_F[26]_AND_123_o(SW[2]_ALU_F[26]_AND_123_o1:O)               | NONE(*)(Output_Data_25_LDC)| 1     |
+SW[2]_ALU_F[25]_AND_125_o(SW[2]_ALU_F[25]_AND_125_o1:O)               | NONE(*)(Output_Data_24_LDC)| 1     |
+SW[2]_ALU_F[22]_AND_131_o(SW[2]_ALU_F[22]_AND_131_o1:O)               | NONE(*)(Output_Data_21_LDC)| 1     |
+SW[2]_ALU_F[24]_AND_127_o(SW[2]_ALU_F[24]_AND_127_o1:O)               | NONE(*)(Output_Data_23_LDC)| 1     |
+SW[2]_ALU_F[23]_AND_129_o(SW[2]_ALU_F[23]_AND_129_o1:O)               | NONE(*)(Output_Data_22_LDC)| 1     |
+SW[2]_ALU_F[21]_AND_133_o(SW[2]_ALU_F[21]_AND_133_o1:O)               | NONE(*)(Output_Data_20_LDC)| 1     |
+SW[2]_ALU_F[20]_AND_135_o(SW[2]_ALU_F[20]_AND_135_o1:O)               | NONE(*)(Output_Data_19_LDC)| 1     |
+SW[2]_ALU_F[19]_AND_137_o(SW[2]_ALU_F[19]_AND_137_o1:O)               | NONE(*)(Output_Data_18_LDC)| 1     |
+SW[2]_ALU_F[18]_AND_139_o(SW[2]_ALU_F[18]_AND_139_o1:O)               | NONE(*)(Output_Data_17_LDC)| 1     |
+SW[2]_ALU_F[17]_AND_141_o(SW[2]_ALU_F[17]_AND_141_o1:O)               | NONE(*)(Output_Data_16_LDC)| 1     |
+SW[2]_ALU_F[16]_AND_143_o(SW[2]_ALU_F[16]_AND_143_o1:O)               | NONE(*)(Output_Data_15_LDC)| 1     |
+SW[2]_ALU_F[13]_AND_149_o(SW[2]_ALU_F[13]_AND_149_o1:O)               | NONE(*)(Output_Data_12_LDC)| 1     |
+SW[2]_ALU_F[15]_AND_145_o(SW[2]_ALU_F[15]_AND_145_o1:O)               | NONE(*)(Output_Data_14_LDC)| 1     |
+SW[2]_ALU_F[14]_AND_147_o(SW[2]_ALU_F[14]_AND_147_o1:O)               | NONE(*)(Output_Data_13_LDC)| 1     |
+SW[2]_ALU_F[12]_AND_151_o(SW[2]_ALU_F[12]_AND_151_o1:O)               | NONE(*)(Output_Data_11_LDC)| 1     |
+SW[2]_ALU_F[11]_AND_153_o(SW[2]_ALU_F[11]_AND_153_o1:O)               | NONE(*)(Output_Data_10_LDC)| 1     |
+SW[2]_ALU_F[10]_AND_155_o(SW[2]_ALU_F[10]_AND_155_o1:O)               | NONE(*)(Output_Data_9_LDC) | 1     |
+SW[2]_ALU_F[9]_AND_157_o(SW[2]_ALU_F[9]_AND_157_o1:O)                 | NONE(*)(Output_Data_8_LDC) | 1     |
+SW[2]_ALU_F[8]_AND_159_o(SW[2]_ALU_F[8]_AND_159_o1:O)                 | NONE(*)(Output_Data_7_LDC) | 1     |
+SW[2]_ALU_F[7]_AND_161_o(SW[2]_ALU_F[7]_AND_161_o1:O)                 | NONE(*)(Output_Data_6_LDC) | 1     |
+SW[2]_ALU_F[4]_AND_167_o(SW[2]_ALU_F[4]_AND_167_o1:O)                 | NONE(*)(Output_Data_3_LDC) | 1     |
+SW[2]_ALU_F[6]_AND_163_o(SW[2]_ALU_F[6]_AND_163_o1:O)                 | NONE(*)(Output_Data_5_LDC) | 1     |
+SW[2]_ALU_F[5]_AND_165_o(SW[2]_ALU_F[5]_AND_165_o1:O)                 | NONE(*)(Output_Data_4_LDC) | 1     |
+SW[2]_ALU_F[3]_AND_169_o(SW[2]_ALU_F[3]_AND_169_o1:O)                 | NONE(*)(Output_Data_2_LDC) | 1     |
+SW[2]_ALU_F[2]_AND_171_o(SW[2]_ALU_F[2]_AND_171_o1:O)                 | NONE(*)(Output_Data_1_LDC) | 1     |
+SW[2]_ALU_F[1]_AND_173_o(SW[2]_ALU_F[1]_AND_173_o1:O)                 | NONE(*)(Output_Data_0_LDC) | 1     |
+SW[2]_ALU_F[32]_AND_111_o(SW[2]_ALU_F[32]_AND_111_o1:O)               | NONE(*)(Output_Data_31_LDC)| 1     |
+----------------------------------------------------------------------+----------------------------+-------+
+(*) These 33 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 13.315ns (Maximum Frequency: 75.102MHz)
+   Minimum input arrival time before clock: 1.535ns
+   Maximum output required time after clock: 1.364ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SW<0>'
+  Clock period: 13.315ns (frequency: 75.102MHz)
+  Total number of paths / destination ports: 10240702 / 2002
+-------------------------------------------------------------------------
+Delay:               6.658ns (Levels of Logic = 10)
+  Source:            get_inst/RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Destination:       RF_Test/REG_Files_31_964 (FF)
+  Source Clock:      SW<0> rising
+  Destination Clock: SW<0> falling
+
+  Data Path: get_inst/RAM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram to RF_Test/REG_Files_31_964
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOBDO5  256   1.846   0.520  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (douta<21>)
+     end scope: 'get_inst/RAM:douta<21>'
+     LUT6:I4->O            1   0.097   0.556  RF_Test/Mmux_R_Data_A_849 (RF_Test/Mmux_R_Data_A_849)
+     LUT6:I2->O            1   0.097   0.000  RF_Test/Mmux_R_Data_A_316 (RF_Test/Mmux_R_Data_A_316)
+     MUXF7:I1->O           6   0.279   0.706  RF_Test/Mmux_R_Data_A_2_f7_15 (R_Data_A<25>)
+     LUT5:I0->O            4   0.097   0.570  ALU_Test/out6 (ALU_Test/out5)
+     LUT6:I2->O            2   0.097   0.299  ALU_Test/_n05472111_1 (ALU_Test/_n05472111)
+     LUT6:I5->O            1   0.097   0.511  ALU_Test/_n05982_SW3_G (N116)
+     LUT6:I3->O            1   0.097   0.000  ALU_Test/_n05983_G (N161)
+     MUXF7:I1->O          34   0.279   0.402  ALU_Test/_n05983 (ALU_F<5>)
+     LUT3:I2->O            1   0.097   0.000  RF_Test/Mmux_REG_Files[1][31]_W_Data[31]_mux_33_OUT271 (RF_Test/REG_Files[1][31]_W_Data[31]_mux_33_OUT<4>)
+     FDRE:D                    0.008          RF_Test/REG_Files_31_964
+    ----------------------------------------
+    Total                      6.658ns (3.091ns logic, 3.567ns route)
+                                       (46.4% logic, 53.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SW<3>'
+  Clock period: 1.242ns (frequency: 805.283MHz)
+  Total number of paths / destination ports: 128 / 64
+-------------------------------------------------------------------------
+Delay:               1.242ns (Levels of Logic = 2)
+  Source:            Output_Data_1_C_1 (FF)
+  Destination:       Output_Data_1_C_1 (FF)
+  Source Clock:      SW<3> rising
+  Destination Clock: SW<3> rising
+
+  Data Path: Output_Data_1_C_1 to Output_Data_1_C_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.361   0.379  Output_Data_1_C_1 (Output_Data_1_C_1)
+     LUT3:I1->O            2   0.097   0.299  Output_Data_11 (Output_Data_1)
+     LUT6:I5->O            2   0.097   0.000  Mmux_Output_Data[32]_GND_1_o_mux_0_OUT12 (Output_Data[32]_GND_1_o_mux_0_OUT<1>)
+     FDC:D                     0.008          Output_Data_1_C_1
+    ----------------------------------------
+    Total                      1.242ns (0.563ns logic, 0.679ns route)
+                                       (45.3% logic, 54.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW<0>'
+  Total number of paths / destination ports: 998 / 998
+-------------------------------------------------------------------------
+Offset:              0.823ns (Levels of Logic = 1)
+  Source:            SW<1> (PAD)
+  Destination:       get_inst/PC_2 (FF)
+  Destination Clock: SW<0> falling
+
+  Data Path: SW<1> to get_inst/PC_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           998   0.001   0.473  SW_1_IBUF (SW_1_IBUF)
+     FDR:R                     0.349          get_inst/PC_2
+    ----------------------------------------
+    Total                      0.823ns (0.350ns logic, 0.473ns route)
+                                       (42.5% logic, 57.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[31]_AND_113_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_30_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[31]_AND_113_o falling
+
+  Data Path: SW<2> to Output_Data_30_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[31]_AND_114_o1 (SW[2]_ALU_F[31]_AND_114_o)
+     LDC:CLR                   0.349          Output_Data_30_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW<3>'
+  Total number of paths / destination ports: 128 / 128
+-------------------------------------------------------------------------
+Offset:              1.535ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_19_C_19 (FF)
+  Destination Clock: SW<3> rising
+
+  Data Path: SW<2> to Output_Data_19_C_19
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.805  SW_2_IBUF (SW_2_IBUF)
+     LUT6:I0->O            2   0.097   0.283  SW[2]_ALU_F[20]_AND_135_o1 (SW[2]_ALU_F[20]_AND_135_o)
+     FDP:PRE                   0.349          Output_Data_19_P_19
+    ----------------------------------------
+    Total                      1.535ns (0.447ns logic, 1.088ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[30]_AND_115_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_29_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[30]_AND_115_o falling
+
+  Data Path: SW<2> to Output_Data_29_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[30]_AND_116_o1 (SW[2]_ALU_F[30]_AND_116_o)
+     LDC:CLR                   0.349          Output_Data_29_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[27]_AND_121_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_26_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[27]_AND_121_o falling
+
+  Data Path: SW<2> to Output_Data_26_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[27]_AND_122_o1 (SW[2]_ALU_F[27]_AND_122_o)
+     LDC:CLR                   0.349          Output_Data_26_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[29]_AND_117_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_28_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[29]_AND_117_o falling
+
+  Data Path: SW<2> to Output_Data_28_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[29]_AND_118_o1 (SW[2]_ALU_F[29]_AND_118_o)
+     LDC:CLR                   0.349          Output_Data_28_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[28]_AND_119_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_27_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[28]_AND_119_o falling
+
+  Data Path: SW<2> to Output_Data_27_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[28]_AND_120_o1 (SW[2]_ALU_F[28]_AND_120_o)
+     LDC:CLR                   0.349          Output_Data_27_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[26]_AND_123_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_25_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[26]_AND_123_o falling
+
+  Data Path: SW<2> to Output_Data_25_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[26]_AND_124_o1 (SW[2]_ALU_F[26]_AND_124_o)
+     LDC:CLR                   0.349          Output_Data_25_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[25]_AND_125_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_24_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[25]_AND_125_o falling
+
+  Data Path: SW<2> to Output_Data_24_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[25]_AND_126_o1 (SW[2]_ALU_F[25]_AND_126_o)
+     LDC:CLR                   0.349          Output_Data_24_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[22]_AND_131_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_21_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[22]_AND_131_o falling
+
+  Data Path: SW<2> to Output_Data_21_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[22]_AND_132_o1 (SW[2]_ALU_F[22]_AND_132_o)
+     LDC:CLR                   0.349          Output_Data_21_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[24]_AND_127_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_23_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[24]_AND_127_o falling
+
+  Data Path: SW<2> to Output_Data_23_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[24]_AND_128_o1 (SW[2]_ALU_F[24]_AND_128_o)
+     LDC:CLR                   0.349          Output_Data_23_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[23]_AND_129_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_22_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[23]_AND_129_o falling
+
+  Data Path: SW<2> to Output_Data_22_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[23]_AND_130_o1 (SW[2]_ALU_F[23]_AND_130_o)
+     LDC:CLR                   0.349          Output_Data_22_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[21]_AND_133_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_20_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[21]_AND_133_o falling
+
+  Data Path: SW<2> to Output_Data_20_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[21]_AND_134_o1 (SW[2]_ALU_F[21]_AND_134_o)
+     LDC:CLR                   0.349          Output_Data_20_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[20]_AND_135_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.535ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_19_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[20]_AND_135_o falling
+
+  Data Path: SW<2> to Output_Data_19_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.805  SW_2_IBUF (SW_2_IBUF)
+     LUT6:I0->O            2   0.097   0.283  SW[2]_ALU_F[20]_AND_136_o1 (SW[2]_ALU_F[20]_AND_136_o)
+     LDC:CLR                   0.349          Output_Data_19_LDC
+    ----------------------------------------
+    Total                      1.535ns (0.447ns logic, 1.088ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[19]_AND_137_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.535ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_18_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[19]_AND_137_o falling
+
+  Data Path: SW<2> to Output_Data_18_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.805  SW_2_IBUF (SW_2_IBUF)
+     LUT6:I0->O            2   0.097   0.283  SW[2]_ALU_F[19]_AND_138_o1 (SW[2]_ALU_F[19]_AND_138_o)
+     LDC:CLR                   0.349          Output_Data_18_LDC
+    ----------------------------------------
+    Total                      1.535ns (0.447ns logic, 1.088ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[18]_AND_139_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.535ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_17_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[18]_AND_139_o falling
+
+  Data Path: SW<2> to Output_Data_17_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.805  SW_2_IBUF (SW_2_IBUF)
+     LUT6:I0->O            2   0.097   0.283  SW[2]_ALU_F[18]_AND_140_o1 (SW[2]_ALU_F[18]_AND_140_o)
+     LDC:CLR                   0.349          Output_Data_17_LDC
+    ----------------------------------------
+    Total                      1.535ns (0.447ns logic, 1.088ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[17]_AND_141_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.535ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_16_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[17]_AND_141_o falling
+
+  Data Path: SW<2> to Output_Data_16_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.805  SW_2_IBUF (SW_2_IBUF)
+     LUT6:I0->O            2   0.097   0.283  SW[2]_ALU_F[17]_AND_142_o1 (SW[2]_ALU_F[17]_AND_142_o)
+     LDC:CLR                   0.349          Output_Data_16_LDC
+    ----------------------------------------
+    Total                      1.535ns (0.447ns logic, 1.088ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[16]_AND_143_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_15_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[16]_AND_143_o falling
+
+  Data Path: SW<2> to Output_Data_15_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[16]_AND_144_o1 (SW[2]_ALU_F[16]_AND_144_o)
+     LDC:CLR                   0.349          Output_Data_15_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[13]_AND_149_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_12_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[13]_AND_149_o falling
+
+  Data Path: SW<2> to Output_Data_12_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[13]_AND_150_o1 (SW[2]_ALU_F[13]_AND_150_o)
+     LDC:CLR                   0.349          Output_Data_12_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[15]_AND_145_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_14_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[15]_AND_145_o falling
+
+  Data Path: SW<2> to Output_Data_14_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[15]_AND_146_o1 (SW[2]_ALU_F[15]_AND_146_o)
+     LDC:CLR                   0.349          Output_Data_14_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[14]_AND_147_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_13_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[14]_AND_147_o falling
+
+  Data Path: SW<2> to Output_Data_13_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[14]_AND_148_o1 (SW[2]_ALU_F[14]_AND_148_o)
+     LDC:CLR                   0.349          Output_Data_13_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[12]_AND_151_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_11_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[12]_AND_151_o falling
+
+  Data Path: SW<2> to Output_Data_11_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[12]_AND_152_o1 (SW[2]_ALU_F[12]_AND_152_o)
+     LDC:CLR                   0.349          Output_Data_11_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[11]_AND_153_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_10_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[11]_AND_153_o falling
+
+  Data Path: SW<2> to Output_Data_10_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[11]_AND_154_o1 (SW[2]_ALU_F[11]_AND_154_o)
+     LDC:CLR                   0.349          Output_Data_10_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[10]_AND_155_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_9_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[10]_AND_155_o falling
+
+  Data Path: SW<2> to Output_Data_9_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[10]_AND_156_o1 (SW[2]_ALU_F[10]_AND_156_o)
+     LDC:CLR                   0.349          Output_Data_9_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[9]_AND_157_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_8_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[9]_AND_157_o falling
+
+  Data Path: SW<2> to Output_Data_8_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[9]_AND_158_o1 (SW[2]_ALU_F[9]_AND_158_o)
+     LDC:CLR                   0.349          Output_Data_8_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[8]_AND_159_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_7_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[8]_AND_159_o falling
+
+  Data Path: SW<2> to Output_Data_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[8]_AND_160_o1 (SW[2]_ALU_F[8]_AND_160_o)
+     LDC:CLR                   0.349          Output_Data_7_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[7]_AND_161_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_6_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[7]_AND_161_o falling
+
+  Data Path: SW<2> to Output_Data_6_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[7]_AND_162_o1 (SW[2]_ALU_F[7]_AND_162_o)
+     LDC:CLR                   0.349          Output_Data_6_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[4]_AND_167_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_3_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[4]_AND_167_o falling
+
+  Data Path: SW<2> to Output_Data_3_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[4]_AND_168_o1 (SW[2]_ALU_F[4]_AND_168_o)
+     LDC:CLR                   0.349          Output_Data_3_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[6]_AND_163_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_5_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[6]_AND_163_o falling
+
+  Data Path: SW<2> to Output_Data_5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[6]_AND_164_o1 (SW[2]_ALU_F[6]_AND_164_o)
+     LDC:CLR                   0.349          Output_Data_5_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[5]_AND_165_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_4_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[5]_AND_165_o falling
+
+  Data Path: SW<2> to Output_Data_4_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[5]_AND_166_o1 (SW[2]_ALU_F[5]_AND_166_o)
+     LDC:CLR                   0.349          Output_Data_4_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[3]_AND_169_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_2_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[3]_AND_169_o falling
+
+  Data Path: SW<2> to Output_Data_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[3]_AND_170_o1 (SW[2]_ALU_F[3]_AND_170_o)
+     LDC:CLR                   0.349          Output_Data_2_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[2]_AND_171_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_1_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[2]_AND_171_o falling
+
+  Data Path: SW<2> to Output_Data_1_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[2]_AND_172_o1 (SW[2]_ALU_F[2]_AND_172_o)
+     LDC:CLR                   0.349          Output_Data_1_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[1]_AND_173_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.398ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_0_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[1]_AND_173_o falling
+
+  Data Path: SW<2> to Output_Data_0_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.668  SW_2_IBUF (SW_2_IBUF)
+     LUT4:I0->O            2   0.097   0.283  SW[2]_ALU_F[1]_AND_174_o1 (SW[2]_ALU_F[1]_AND_174_o)
+     LDC:CLR                   0.349          Output_Data_0_LDC
+    ----------------------------------------
+    Total                      1.398ns (0.447ns logic, 0.951ns route)
+                                       (32.0% logic, 68.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[2]_ALU_F[32]_AND_111_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.221ns (Levels of Logic = 2)
+  Source:            SW<2> (PAD)
+  Destination:       Output_Data_31_LDC (LATCH)
+  Destination Clock: SW[2]_ALU_F[32]_AND_111_o falling
+
+  Data Path: SW<2> to Output_Data_31_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.491  SW_2_IBUF (SW_2_IBUF)
+     LUT2:I0->O            2   0.097   0.283  SW[2]_ALU_F[32]_AND_112_o1 (SW[2]_ALU_F[32]_AND_112_o)
+     LDC:CLR                   0.349          Output_Data_31_LDC
+    ----------------------------------------
+    Total                      1.221ns (0.447ns logic, 0.774ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[32]_AND_111_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_31_LDC (LATCH)
+  Destination:       Output_Data<32> (PAD)
+  Source Clock:      SW[2]_ALU_F[32]_AND_111_o falling
+
+  Data Path: Output_Data_31_LDC to Output_Data<32>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_31_LDC (Output_Data_31_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_311 (Output_Data_31)
+     OBUF:I->O                 0.000          Output_Data_32_OBUF (Output_Data<32>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW<3>'
+  Total number of paths / destination ports: 64 / 32
+-------------------------------------------------------------------------
+Offset:              1.121ns (Levels of Logic = 2)
+  Source:            Output_Data_31_C_31 (FF)
+  Destination:       Output_Data<32> (PAD)
+  Source Clock:      SW<3> rising
+
+  Data Path: Output_Data_31_C_31 to Output_Data<32>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.361   0.383  Output_Data_31_C_31 (Output_Data_31_C_31)
+     LUT3:I1->O            1   0.097   0.279  Output_Data_311 (Output_Data_31)
+     OBUF:I->O                 0.000          Output_Data_32_OBUF (Output_Data<32>)
+    ----------------------------------------
+    Total                      1.121ns (0.458ns logic, 0.663ns route)
+                                       (40.9% logic, 59.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[31]_AND_113_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_30_LDC (LATCH)
+  Destination:       Output_Data<31> (PAD)
+  Source Clock:      SW[2]_ALU_F[31]_AND_113_o falling
+
+  Data Path: Output_Data_30_LDC to Output_Data<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_30_LDC (Output_Data_30_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_301 (Output_Data_30)
+     OBUF:I->O                 0.000          Output_Data_31_OBUF (Output_Data<31>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[30]_AND_115_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_29_LDC (LATCH)
+  Destination:       Output_Data<30> (PAD)
+  Source Clock:      SW[2]_ALU_F[30]_AND_115_o falling
+
+  Data Path: Output_Data_29_LDC to Output_Data<30>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_29_LDC (Output_Data_29_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_291 (Output_Data_29)
+     OBUF:I->O                 0.000          Output_Data_30_OBUF (Output_Data<30>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[29]_AND_117_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_28_LDC (LATCH)
+  Destination:       Output_Data<29> (PAD)
+  Source Clock:      SW[2]_ALU_F[29]_AND_117_o falling
+
+  Data Path: Output_Data_28_LDC to Output_Data<29>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_28_LDC (Output_Data_28_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_281 (Output_Data_28)
+     OBUF:I->O                 0.000          Output_Data_29_OBUF (Output_Data<29>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[28]_AND_119_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_27_LDC (LATCH)
+  Destination:       Output_Data<28> (PAD)
+  Source Clock:      SW[2]_ALU_F[28]_AND_119_o falling
+
+  Data Path: Output_Data_27_LDC to Output_Data<28>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_27_LDC (Output_Data_27_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_271 (Output_Data_27)
+     OBUF:I->O                 0.000          Output_Data_28_OBUF (Output_Data<28>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[27]_AND_121_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_26_LDC (LATCH)
+  Destination:       Output_Data<27> (PAD)
+  Source Clock:      SW[2]_ALU_F[27]_AND_121_o falling
+
+  Data Path: Output_Data_26_LDC to Output_Data<27>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_26_LDC (Output_Data_26_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_261 (Output_Data_26)
+     OBUF:I->O                 0.000          Output_Data_27_OBUF (Output_Data<27>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[26]_AND_123_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_25_LDC (LATCH)
+  Destination:       Output_Data<26> (PAD)
+  Source Clock:      SW[2]_ALU_F[26]_AND_123_o falling
+
+  Data Path: Output_Data_25_LDC to Output_Data<26>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_25_LDC (Output_Data_25_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_251 (Output_Data_25)
+     OBUF:I->O                 0.000          Output_Data_26_OBUF (Output_Data<26>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[25]_AND_125_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_24_LDC (LATCH)
+  Destination:       Output_Data<25> (PAD)
+  Source Clock:      SW[2]_ALU_F[25]_AND_125_o falling
+
+  Data Path: Output_Data_24_LDC to Output_Data<25>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_24_LDC (Output_Data_24_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_241 (Output_Data_24)
+     OBUF:I->O                 0.000          Output_Data_25_OBUF (Output_Data<25>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[24]_AND_127_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_23_LDC (LATCH)
+  Destination:       Output_Data<24> (PAD)
+  Source Clock:      SW[2]_ALU_F[24]_AND_127_o falling
+
+  Data Path: Output_Data_23_LDC to Output_Data<24>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_23_LDC (Output_Data_23_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_231 (Output_Data_23)
+     OBUF:I->O                 0.000          Output_Data_24_OBUF (Output_Data<24>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[23]_AND_129_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_22_LDC (LATCH)
+  Destination:       Output_Data<23> (PAD)
+  Source Clock:      SW[2]_ALU_F[23]_AND_129_o falling
+
+  Data Path: Output_Data_22_LDC to Output_Data<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_22_LDC (Output_Data_22_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_221 (Output_Data_22)
+     OBUF:I->O                 0.000          Output_Data_23_OBUF (Output_Data<23>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[22]_AND_131_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_21_LDC (LATCH)
+  Destination:       Output_Data<22> (PAD)
+  Source Clock:      SW[2]_ALU_F[22]_AND_131_o falling
+
+  Data Path: Output_Data_21_LDC to Output_Data<22>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_21_LDC (Output_Data_21_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_211 (Output_Data_21)
+     OBUF:I->O                 0.000          Output_Data_22_OBUF (Output_Data<22>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[21]_AND_133_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_20_LDC (LATCH)
+  Destination:       Output_Data<21> (PAD)
+  Source Clock:      SW[2]_ALU_F[21]_AND_133_o falling
+
+  Data Path: Output_Data_20_LDC to Output_Data<21>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_20_LDC (Output_Data_20_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_201 (Output_Data_20)
+     OBUF:I->O                 0.000          Output_Data_21_OBUF (Output_Data<21>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[20]_AND_135_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_19_LDC (LATCH)
+  Destination:       Output_Data<20> (PAD)
+  Source Clock:      SW[2]_ALU_F[20]_AND_135_o falling
+
+  Data Path: Output_Data_19_LDC to Output_Data<20>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_19_LDC (Output_Data_19_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_191 (Output_Data_19)
+     OBUF:I->O                 0.000          Output_Data_20_OBUF (Output_Data<20>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[19]_AND_137_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_18_LDC (LATCH)
+  Destination:       Output_Data<19> (PAD)
+  Source Clock:      SW[2]_ALU_F[19]_AND_137_o falling
+
+  Data Path: Output_Data_18_LDC to Output_Data<19>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_18_LDC (Output_Data_18_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_181 (Output_Data_18)
+     OBUF:I->O                 0.000          Output_Data_19_OBUF (Output_Data<19>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[18]_AND_139_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_17_LDC (LATCH)
+  Destination:       Output_Data<18> (PAD)
+  Source Clock:      SW[2]_ALU_F[18]_AND_139_o falling
+
+  Data Path: Output_Data_17_LDC to Output_Data<18>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_17_LDC (Output_Data_17_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_171 (Output_Data_17)
+     OBUF:I->O                 0.000          Output_Data_18_OBUF (Output_Data<18>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[17]_AND_141_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_16_LDC (LATCH)
+  Destination:       Output_Data<17> (PAD)
+  Source Clock:      SW[2]_ALU_F[17]_AND_141_o falling
+
+  Data Path: Output_Data_16_LDC to Output_Data<17>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_16_LDC (Output_Data_16_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_161 (Output_Data_16)
+     OBUF:I->O                 0.000          Output_Data_17_OBUF (Output_Data<17>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[16]_AND_143_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_15_LDC (LATCH)
+  Destination:       Output_Data<16> (PAD)
+  Source Clock:      SW[2]_ALU_F[16]_AND_143_o falling
+
+  Data Path: Output_Data_15_LDC to Output_Data<16>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_15_LDC (Output_Data_15_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_151 (Output_Data_15)
+     OBUF:I->O                 0.000          Output_Data_16_OBUF (Output_Data<16>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[15]_AND_145_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_14_LDC (LATCH)
+  Destination:       Output_Data<15> (PAD)
+  Source Clock:      SW[2]_ALU_F[15]_AND_145_o falling
+
+  Data Path: Output_Data_14_LDC to Output_Data<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_14_LDC (Output_Data_14_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_141 (Output_Data_14)
+     OBUF:I->O                 0.000          Output_Data_15_OBUF (Output_Data<15>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[14]_AND_147_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_13_LDC (LATCH)
+  Destination:       Output_Data<14> (PAD)
+  Source Clock:      SW[2]_ALU_F[14]_AND_147_o falling
+
+  Data Path: Output_Data_13_LDC to Output_Data<14>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_13_LDC (Output_Data_13_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_131 (Output_Data_13)
+     OBUF:I->O                 0.000          Output_Data_14_OBUF (Output_Data<14>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[13]_AND_149_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_12_LDC (LATCH)
+  Destination:       Output_Data<13> (PAD)
+  Source Clock:      SW[2]_ALU_F[13]_AND_149_o falling
+
+  Data Path: Output_Data_12_LDC to Output_Data<13>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_12_LDC (Output_Data_12_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_121 (Output_Data_12)
+     OBUF:I->O                 0.000          Output_Data_13_OBUF (Output_Data<13>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[12]_AND_151_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_11_LDC (LATCH)
+  Destination:       Output_Data<12> (PAD)
+  Source Clock:      SW[2]_ALU_F[12]_AND_151_o falling
+
+  Data Path: Output_Data_11_LDC to Output_Data<12>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_11_LDC (Output_Data_11_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_111 (Output_Data_11)
+     OBUF:I->O                 0.000          Output_Data_12_OBUF (Output_Data<12>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[11]_AND_153_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_10_LDC (LATCH)
+  Destination:       Output_Data<11> (PAD)
+  Source Clock:      SW[2]_ALU_F[11]_AND_153_o falling
+
+  Data Path: Output_Data_10_LDC to Output_Data<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_10_LDC (Output_Data_10_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_101 (Output_Data_10)
+     OBUF:I->O                 0.000          Output_Data_11_OBUF (Output_Data<11>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[10]_AND_155_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_9_LDC (LATCH)
+  Destination:       Output_Data<10> (PAD)
+  Source Clock:      SW[2]_ALU_F[10]_AND_155_o falling
+
+  Data Path: Output_Data_9_LDC to Output_Data<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_9_LDC (Output_Data_9_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_91 (Output_Data_9)
+     OBUF:I->O                 0.000          Output_Data_10_OBUF (Output_Data<10>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[9]_AND_157_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_8_LDC (LATCH)
+  Destination:       Output_Data<9> (PAD)
+  Source Clock:      SW[2]_ALU_F[9]_AND_157_o falling
+
+  Data Path: Output_Data_8_LDC to Output_Data<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_8_LDC (Output_Data_8_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_81 (Output_Data_8)
+     OBUF:I->O                 0.000          Output_Data_9_OBUF (Output_Data<9>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[8]_AND_159_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_7_LDC (LATCH)
+  Destination:       Output_Data<8> (PAD)
+  Source Clock:      SW[2]_ALU_F[8]_AND_159_o falling
+
+  Data Path: Output_Data_7_LDC to Output_Data<8>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_7_LDC (Output_Data_7_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_71 (Output_Data_7)
+     OBUF:I->O                 0.000          Output_Data_8_OBUF (Output_Data<8>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[7]_AND_161_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_6_LDC (LATCH)
+  Destination:       Output_Data<7> (PAD)
+  Source Clock:      SW[2]_ALU_F[7]_AND_161_o falling
+
+  Data Path: Output_Data_6_LDC to Output_Data<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_6_LDC (Output_Data_6_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_61 (Output_Data_6)
+     OBUF:I->O                 0.000          Output_Data_7_OBUF (Output_Data<7>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[6]_AND_163_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_5_LDC (LATCH)
+  Destination:       Output_Data<6> (PAD)
+  Source Clock:      SW[2]_ALU_F[6]_AND_163_o falling
+
+  Data Path: Output_Data_5_LDC to Output_Data<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_5_LDC (Output_Data_5_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_51 (Output_Data_5)
+     OBUF:I->O                 0.000          Output_Data_6_OBUF (Output_Data<6>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[5]_AND_165_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_4_LDC (LATCH)
+  Destination:       Output_Data<5> (PAD)
+  Source Clock:      SW[2]_ALU_F[5]_AND_165_o falling
+
+  Data Path: Output_Data_4_LDC to Output_Data<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_4_LDC (Output_Data_4_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_41 (Output_Data_4)
+     OBUF:I->O                 0.000          Output_Data_5_OBUF (Output_Data<5>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[4]_AND_167_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_3_LDC (LATCH)
+  Destination:       Output_Data<4> (PAD)
+  Source Clock:      SW[2]_ALU_F[4]_AND_167_o falling
+
+  Data Path: Output_Data_3_LDC to Output_Data<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_3_LDC (Output_Data_3_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_32 (Output_Data_3)
+     OBUF:I->O                 0.000          Output_Data_4_OBUF (Output_Data<4>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[3]_AND_169_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_2_LDC (LATCH)
+  Destination:       Output_Data<3> (PAD)
+  Source Clock:      SW[2]_ALU_F[3]_AND_169_o falling
+
+  Data Path: Output_Data_2_LDC to Output_Data<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_2_LDC (Output_Data_2_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_21 (Output_Data_2)
+     OBUF:I->O                 0.000          Output_Data_3_OBUF (Output_Data<3>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[2]_AND_171_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_1_LDC (LATCH)
+  Destination:       Output_Data<2> (PAD)
+  Source Clock:      SW[2]_ALU_F[2]_AND_171_o falling
+
+  Data Path: Output_Data_1_LDC to Output_Data<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.472   0.511  Output_Data_1_LDC (Output_Data_1_LDC)
+     LUT3:I0->O            2   0.097   0.283  Output_Data_11 (Output_Data_1)
+     OBUF:I->O                 0.000          Output_Data_2_OBUF (Output_Data<2>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[2]_ALU_F[1]_AND_173_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.364ns (Levels of Logic = 2)
+  Source:            Output_Data_0_LDC (LATCH)
+  Destination:       Output_Data<1> (PAD)
+  Source Clock:      SW[2]_ALU_F[1]_AND_173_o falling
+
+  Data Path: Output_Data_0_LDC to Output_Data<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.472   0.515  Output_Data_0_LDC (Output_Data_0_LDC)
+     LUT3:I0->O            1   0.097   0.279  Output_Data_01 (Output_Data_0)
+     OBUF:I->O                 0.000          Output_Data_1_OBUF (Output_Data<1>)
+    ----------------------------------------
+    Total                      1.364ns (0.569ns logic, 0.795ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock SW<0>
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |    1.092|    6.658|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.782|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW<3>
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |    9.710|    8.408|         |         |
+SW<3>                          |    1.242|         |         |         |
+SW[2]_ALU_F[10]_AND_155_o      |         |    1.092|         |         |
+SW[2]_ALU_F[11]_AND_153_o      |         |    1.092|         |         |
+SW[2]_ALU_F[12]_AND_151_o      |         |    1.092|         |         |
+SW[2]_ALU_F[13]_AND_149_o      |         |    1.092|         |         |
+SW[2]_ALU_F[14]_AND_147_o      |         |    1.092|         |         |
+SW[2]_ALU_F[15]_AND_145_o      |         |    1.092|         |         |
+SW[2]_ALU_F[16]_AND_143_o      |         |    1.092|         |         |
+SW[2]_ALU_F[17]_AND_141_o      |         |    1.092|         |         |
+SW[2]_ALU_F[18]_AND_139_o      |         |    1.092|         |         |
+SW[2]_ALU_F[19]_AND_137_o      |         |    1.092|         |         |
+SW[2]_ALU_F[1]_AND_173_o       |         |    1.265|         |         |
+SW[2]_ALU_F[20]_AND_135_o      |         |    1.092|         |         |
+SW[2]_ALU_F[21]_AND_133_o      |         |    1.092|         |         |
+SW[2]_ALU_F[22]_AND_131_o      |         |    1.092|         |         |
+SW[2]_ALU_F[23]_AND_129_o      |         |    1.092|         |         |
+SW[2]_ALU_F[24]_AND_127_o      |         |    1.092|         |         |
+SW[2]_ALU_F[25]_AND_125_o      |         |    1.092|         |         |
+SW[2]_ALU_F[26]_AND_123_o      |         |    1.092|         |         |
+SW[2]_ALU_F[27]_AND_121_o      |         |    1.092|         |         |
+SW[2]_ALU_F[28]_AND_119_o      |         |    1.092|         |         |
+SW[2]_ALU_F[29]_AND_117_o      |         |    1.092|         |         |
+SW[2]_ALU_F[2]_AND_171_o       |         |    1.485|         |         |
+SW[2]_ALU_F[30]_AND_115_o      |         |    1.092|         |         |
+SW[2]_ALU_F[31]_AND_113_o      |         |    1.092|         |         |
+SW[2]_ALU_F[32]_AND_111_o      |         |    1.092|         |         |
+SW[2]_ALU_F[3]_AND_169_o       |         |    1.092|         |         |
+SW[2]_ALU_F[4]_AND_167_o       |         |    1.092|         |         |
+SW[2]_ALU_F[5]_AND_165_o       |         |    1.092|         |         |
+SW[2]_ALU_F[6]_AND_163_o       |         |    1.092|         |         |
+SW[2]_ALU_F[7]_AND_161_o       |         |    1.092|         |         |
+SW[2]_ALU_F[8]_AND_159_o       |         |    1.092|         |         |
+SW[2]_ALU_F[9]_AND_157_o       |         |    1.092|         |         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |    6.821|         |         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[10]_AND_155_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.990|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.882|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[11]_AND_153_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.013|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.882|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[12]_AND_151_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.036|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.882|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[13]_AND_149_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.059|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.882|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[14]_AND_147_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.082|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.882|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[15]_AND_145_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.105|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.882|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[16]_AND_143_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.128|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.882|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[17]_AND_141_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.798|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.449|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[18]_AND_139_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.803|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.449|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[19]_AND_137_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.802|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.449|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[1]_AND_173_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.781|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    2.863|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[20]_AND_135_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.798|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.449|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[21]_AND_133_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.900|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.548|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[22]_AND_131_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.894|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.548|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[23]_AND_129_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.890|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.548|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[24]_AND_127_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.910|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.548|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[25]_AND_125_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.933|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.985|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[26]_AND_123_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.956|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.985|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[27]_AND_121_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.979|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.985|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[28]_AND_119_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.002|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.985|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[29]_AND_117_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.025|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.985|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[2]_AND_171_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.150|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    4.274|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[30]_AND_115_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.048|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.985|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[31]_AND_113_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.071|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    4.069|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[32]_AND_111_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.094|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    4.069|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[3]_AND_169_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.150|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    4.274|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[4]_AND_167_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.150|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    4.274|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[5]_AND_165_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    7.282|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    4.406|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[6]_AND_163_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.898|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.882|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[7]_AND_161_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.921|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.882|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[8]_AND_159_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.944|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.882|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[2]_ALU_F[9]_AND_157_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+SW<0>                          |         |         |    6.967|         |
+yimaqi/OP[5]_GND_37_o_equal_1_o|         |         |    3.882|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock yimaqi/OP[5]_GND_37_o_equal_1_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+SW<0>          |         |         |    3.039|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 40.00 secs
+Total CPU time to Xst completion: 40.17 secs
+ 
+--> 
+
+Total memory usage is 4707636 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  138 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

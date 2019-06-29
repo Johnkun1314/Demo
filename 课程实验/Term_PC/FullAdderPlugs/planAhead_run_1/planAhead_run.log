@@ -1,0 +1,108 @@
+
+****** PlanAhead v14.7
+  **** Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source E:/ISE/Term_PC/FullAdderPlugs/pa.fromNetlist.tcl
+# create_project -name FullAdderPlugs -dir "E:/ISE/Term_PC/FullAdderPlugs/planAhead_run_1" -part xc7a100tfgg484-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "E:/ISE/Term_PC/FullAdderPlugs/fulladderplugs.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {E:/ISE/Term_PC/FullAdderPlugs} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "fulladderplugs.ucf" [current_fileset -constrset]
+Adding file 'E:/ISE/Term_PC/FullAdderPlugs/fulladderplugs.ucf' to fileset 'constrs_1'
+# add_files [list {fulladderplugs.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc7a100tfgg484-3
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design fulladderplugs.ngc ...
+WARNING:NetListWriters:298 - No output is written to fulladderplugs.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file fulladderplugs.edif ...
+ngc2edif: Total memory usage is 84012 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/FullAdderPlugs.data/cache/fulladderplugs_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/FullAdderPlugs.data/cache/fulladderplugs_ngc_zx.edif]
+Loading clock regions from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/fgg484/Package.xml
+Loading io standards from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : D:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/drc.xml
+Parsing UCF File [E:/ISE/Term_PC/FullAdderPlugs/fulladderplugs.ucf]
+Finished Parsing UCF File [E:/ISE/Term_PC/FullAdderPlugs/fulladderplugs.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 811ad059
+link_design: Time (s): elapsed = 00:00:13 . Memory (MB): peak = 819.707 ; gain = 373.914
+set_property iostandard LVCMOS18 [get_ports [list {a[3]} {a[2]} {a[1]} {a[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {b[3]} {b[2]} {b[1]} {b[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {sum[3]} {sum[2]} {sum[1]} {sum[0]}]]
+startgroup
+set_property package_pin T3 [get_ports {a[3]}]
+endgroup
+startgroup
+set_property package_pin U3 [get_ports {a[2]}]
+endgroup
+startgroup
+set_property package_pin T4 [get_ports {a[1]}]
+endgroup
+startgroup
+set_property package_pin V3 [get_ports {a[0]}]
+endgroup
+startgroup
+set_property package_pin W4 [get_ports {b[3]}]
+endgroup
+startgroup
+set_property package_pin Y4 [get_ports {b[2]}]
+endgroup
+startgroup
+set_property package_pin Y6 [get_ports {b[1]}]
+endgroup
+startgroup
+set_property package_pin W7 [get_ports {b[0]}]
+endgroup
+startgroup
+set_property package_pin R1 [get_ports {sum[3]}]
+endgroup
+startgroup
+set_property package_pin P2 [get_ports {sum[2]}]
+endgroup
+startgroup
+set_property package_pin P1 [get_ports {sum[1]}]
+endgroup
+startgroup
+set_property package_pin N2 [get_ports {sum[0]}]
+endgroup
+set_property iostandard LVCMOS18 [get_ports [list c_in]]
+set_property iostandard LVCMOS18 [get_ports [list c_out]]
+startgroup
+set_property package_pin Y7 [get_ports c_in]
+endgroup
+startgroup
+set_property package_pin J2 [get_ports c_out]
+endgroup
+set_property pulltype PULLDOWN [get_ports [list {a[3]} {a[2]} {a[1]} {a[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {b[3]} {b[2]} {b[1]} {b[0]}]]
+set_property pulltype PULLDOWN [get_ports [list c_in]]
+save_constraints
+exit

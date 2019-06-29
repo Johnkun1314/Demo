@@ -1,0 +1,27 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Dec 19 09:42:01 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "in<2>" LOCATE = SITE "U7" LEVEL 1;
+COMP "write" LOCATE = SITE "AA8" LEVEL 1;
+PIN write_pin<0> = BEL "write" PINNAME PAD;
+PIN "write_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "in<3>" LOCATE = SITE "R6" LEVEL 1;
+COMP "out<0>" LOCATE = SITE "N2" LEVEL 1;
+COMP "out<1>" LOCATE = SITE "P1" LEVEL 1;
+COMP "out<2>" LOCATE = SITE "P2" LEVEL 1;
+COMP "out<3>" LOCATE = SITE "R1" LEVEL 1;
+COMP "read" LOCATE = SITE "V8" LEVEL 1;
+PIN read_pin<0> = BEL "read" PINNAME PAD;
+PIN "read_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "addr<0>" LOCATE = SITE "T4" LEVEL 1;
+COMP "addr<1>" LOCATE = SITE "U3" LEVEL 1;
+COMP "addr<2>" LOCATE = SITE "T3" LEVEL 1;
+COMP "clk" LOCATE = SITE "T5" LEVEL 1;
+PIN clk_pin<0> = BEL "clk" PINNAME PAD;
+PIN "clk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "in<0>" LOCATE = SITE "AB8" LEVEL 1;
+COMP "in<1>" LOCATE = SITE "AB7" LEVEL 1;
+SCHEMATIC END;
+

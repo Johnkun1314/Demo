@@ -1,0 +1,7 @@
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/PC.v -lang verilog -prj CPU -o .spl -module {} -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/PC.v -lang verilog -prj CPU -o .spl -module {} -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/PC.v -lang verilog -prj CPU -o .spl -module {} -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/PC_pc.v -lang verilog -prj CPU -o .spl -module {} -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/PC_pc.v -lang verilog -prj CPU -o .spl -module {} -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/PC_pc.v -lang verilog -prj CPU -o .spl -module {} -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/PC_pc.v -lang verilog -prj CPU -o .spl -module {} -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 

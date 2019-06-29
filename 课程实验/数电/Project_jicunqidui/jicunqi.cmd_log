@@ -1,0 +1,33 @@
+xst -intstyle ise -ifn "E:/ISE/Project_jicunqidui/jicunqi.xst" -ofn "E:/ISE/Project_jicunqidui/jicunqi.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_jicunqidui/jicunqi.xst" -ofn "E:/ISE/Project_jicunqidui/jicunqi.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_jicunqidui/jicunqi.xst" -ofn "E:/ISE/Project_jicunqidui/jicunqi.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_jicunqidui/jicunqi.xst" -ofn "E:/ISE/Project_jicunqidui/jicunqi.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_jicunqidui/jicunqi.xst" -ofn "E:/ISE/Project_jicunqidui/jicunqi.syr" 
+xst -intstyle ise -ifn "E:/ISE/Project_jicunqidui/jicunqi.xst" -ofn "E:/ISE/Project_jicunqidui/jicunqi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc jicunqi.ucf -p xc7a100t-fgg484-3 jicunqi.ngc jicunqi.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o jicunqi_map.ncd jicunqi.ngd jicunqi.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc jicunqi.ucf -p xc7a100t-fgg484-3 jicunqi.ngc jicunqi.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o jicunqi_map.ncd jicunqi.ngd jicunqi.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc jicunqi.ucf -p xc7a100t-fgg484-3 jicunqi.ngc jicunqi.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o jicunqi_map.ncd jicunqi.ngd jicunqi.pcf 
+par -w -intstyle ise -ol high -mt off jicunqi_map.ncd jicunqi.ncd jicunqi.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml jicunqi.twx jicunqi.ncd -o jicunqi.twr jicunqi.pcf -ucf jicunqi.ucf 
+bitgen -intstyle ise -f jicunqi.ut jicunqi.ncd 
+xst -intstyle ise -ifn "E:/ISE/Project_jicunqidui/jicunqi.xst" -ofn "E:/ISE/Project_jicunqidui/jicunqi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc jicunqi.ucf -p xc7a100t-fgg484-3 jicunqi.ngc jicunqi.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o jicunqi_map.ncd jicunqi.ngd jicunqi.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc jicunqi.ucf -p xc7a100t-fgg484-3 jicunqi.ngc jicunqi.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o jicunqi_map.ncd jicunqi.ngd jicunqi.pcf 
+par -w -intstyle ise -ol high -mt off jicunqi_map.ncd jicunqi.ncd jicunqi.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml jicunqi.twx jicunqi.ncd -o jicunqi.twr jicunqi.pcf -ucf jicunqi.ucf 
+bitgen -intstyle ise -f jicunqi.ut jicunqi.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc jicunqi.ucf -p xc7a100t-fgg484-3 jicunqi.ngc jicunqi.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o jicunqi_map.ncd jicunqi.ngd jicunqi.pcf 
+par -w -intstyle ise -ol high -mt off jicunqi_map.ncd jicunqi.ncd jicunqi.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml jicunqi.twx jicunqi.ncd -o jicunqi.twr jicunqi.pcf -ucf jicunqi.ucf 
+xst -intstyle ise -ifn "E:/ISE/Project_jicunqidui/jicunqi.xst" -ofn "E:/ISE/Project_jicunqidui/jicunqi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc jicunqi.ucf -p xc7a100t-fgg484-3 jicunqi.ngc jicunqi.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o jicunqi_map.ncd jicunqi.ngd jicunqi.pcf 
+par -w -intstyle ise -ol high -mt off jicunqi_map.ncd jicunqi.ncd jicunqi.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml jicunqi.twx jicunqi.ncd -o jicunqi.twr jicunqi.pcf -ucf jicunqi.ucf 
+bitgen -intstyle ise -f jicunqi.ut jicunqi.ncd 

@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+Test instance_name (
+    .clk(clk), 
+    .clr(clr), 
+    .Output_Data(Output_Data), 
+    .Output_Addr(Output_Addr)
+    );
+
+

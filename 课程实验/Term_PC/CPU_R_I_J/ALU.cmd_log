@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/ALU.v -lang verilog -prj CPU_R_I_J -o ALU.spl -module ALU -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ALU.spl E:/ISE/Term_PC/CPU_R_I_J/ALU.sym 

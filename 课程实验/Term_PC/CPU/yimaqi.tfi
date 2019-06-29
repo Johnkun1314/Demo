@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+yimaqi instance_name (
+    .OP(OP), 
+    .func(func), 
+    .write_reg(write_reg), 
+    .ALU_OP(ALU_OP)
+    );
+
+

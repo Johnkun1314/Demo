@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Dec 03 15:02:33 2018
+
+drc -z shiyan_14.ncd shiyan_14.pcf
+
+DRC detected 0 errors and 0 warnings.

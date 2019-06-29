@@ -1,0 +1,7 @@
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/PC_pc.v -lang verilog -prj CPU -o PC_pc.spl -module PC_pc -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 PC_pc.spl E:/ISE/Term_PC/CPU/PC_pc.sym 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/PC_pc.v -lang verilog -prj CPU -o PC_pc.spl -module PC_pc -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 PC_pc.spl E:/ISE/Term_PC/CPU/PC_pc.sym 
+vhdtdtfi -lang verilog -prj CPU -o E:/ISE/Term_PC/CPU/PC_pc.tfi -lib work E:/ISE/Term_PC/CPU//PC_pc.v -module PC_pc -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU/PC_pc.v -lang verilog -prj CPU -o PC_pc.spl -module PC_pc -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 PC_pc.spl E:/ISE/Term_PC/CPU/PC_pc.sym 

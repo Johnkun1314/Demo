@@ -1,0 +1,7 @@
+verilog work "ipcore_dir/RAM_B.v"
+verilog work "yimaqi.v"
+verilog work "RegFile.v"
+verilog work "ipcore_dir/RAM_A.v"
+verilog work "Get_Inst.v"
+verilog work "ALU.v"
+verilog work "CPU_R_I.v"

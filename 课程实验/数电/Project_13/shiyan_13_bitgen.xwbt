@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\FPGA\shiyan_13\shiyan_13.ncd
+OUTFILE=D:\FPGA\shiyan_13\shiyan_13.bit
+FAMILY=Artix7
+PART=xc7a100t-3fgg484
+WORKINGDIR=D:\FPGA\shiyan_13
+LICENSE=WebPack
+USER_INFO=__0_0_0

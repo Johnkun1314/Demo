@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Wed Dec 19 09:06:33 2018
+# Process ID: 2340
+# Log file: E:/ISE/Project_jicunqidui/planAhead_run_2/planAhead.log
+# Journal file: E:/ISE/Project_jicunqidui/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/ISE/Project_jicunqidui/pa.fromNetlist.tcl

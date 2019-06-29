@@ -1,0 +1,121 @@
+
+
+NET "Output_Data[31]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[30]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[29]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[28]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[27]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[26]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[25]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[24]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[23]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[22]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[21]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[20]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[19]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[18]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[17]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[16]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[15]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[14]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[13]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[12]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[11]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[10]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[9]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[8]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[7]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[6]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[5]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[4]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[3]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[2]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[1]" IOSTANDARD = LVCMOS18;
+NET "Output_Data[32]" IOSTANDARD = LVCMOS18;
+
+
+NET "Output_Data[32]" LOC = R1;
+NET "Output_Data[31]" LOC = P2;
+NET "Output_Data[30]" LOC = P1;
+NET "Output_Data[29]" LOC = N2;
+NET "Output_Data[28]" LOC = M1;
+NET "Output_Data[27]" LOC = M2;
+NET "Output_Data[26]" LOC = L1;
+NET "Output_Data[25]" LOC = J2;
+NET "Output_Data[24]" LOC = G1;
+NET "Output_Data[23]" LOC = E1;
+NET "Output_Data[22]" LOC = D2;
+NET "Output_Data[21]" LOC = A1;
+NET "Output_Data[20]" LOC = L3;
+NET "Output_Data[19]" LOC = G3;
+NET "Output_Data[18]" LOC = K4;
+NET "Output_Data[17]" LOC = G4;
+NET "Output_Data[16]" LOC = K1;
+NET "Output_Data[15]" LOC = J1;
+NET "Output_Data[14]" LOC = H2;
+NET "Output_Data[13]" LOC = G2;
+NET "Output_Data[12]" LOC = F1;
+NET "Output_Data[11]" LOC = E2;
+NET "Output_Data[10]" LOC = D1;
+NET "Output_Data[9]" LOC = B1;
+NET "Output_Data[8]" LOC = B2;
+NET "Output_Data[7]" LOC = N3;
+NET "Output_Data[6]" LOC = M3;
+NET "Output_Data[5]" LOC = K3;
+NET "Output_Data[4]" LOC = H3;
+NET "Output_Data[3]" LOC = N4;
+NET "Output_Data[2]" LOC = L4;
+NET "Output_Data[1]" LOC = J4;
+
+
+NET "led[7]" IOSTANDARD = LVCMOS18;
+NET "led[6]" IOSTANDARD = LVCMOS18;
+NET "led[5]" IOSTANDARD = LVCMOS18;
+NET "led[4]" IOSTANDARD = LVCMOS18;
+NET "led[3]" IOSTANDARD = LVCMOS18;
+NET "led[2]" IOSTANDARD = LVCMOS18;
+NET "led[1]" IOSTANDARD = LVCMOS18;
+NET "led[0]" IOSTANDARD = LVCMOS18;
+
+
+NET "led[7]" LOC = H19;
+NET "led[6]" LOC = G20;
+NET "led[5]" LOC = J22;
+NET "led[4]" LOC = K22;
+NET "led[3]" LOC = K21;
+NET "led[2]" LOC = H20;
+NET "led[1]" LOC = H22;
+NET "led[0]" LOC = J21;
+
+
+NET "which[2]" IOSTANDARD = LVCMOS18;
+NET "which[1]" IOSTANDARD = LVCMOS18;
+NET "which[0]" IOSTANDARD = LVCMOS18;
+
+
+NET "which[2]" LOC = M22;
+NET "which[1]" LOC = M21;
+NET "which[0]" LOC = N22;
+
+
+NET "clr" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "clr" IOSTANDARD = LVCMOS18;
+NET "clr" LOC = V8;
+NET "cls" LOC = AA8;
+NET "cls" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "cls" IOSTANDARD = LVCMOS18;
+
+NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "clk" IOSTANDARD = LVCMOS18;
+NET "clk" LOC = H4;
+
+NET "shine" IOSTANDARD = LVCMOS18;
+NET "shine" LOC = L21;
+
+
+
+
+
+
+
+

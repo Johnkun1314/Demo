@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Tue Dec 18 16:18:22 2018
+# Process ID: 14612
+# Log file: E:/ISE/Project_jicunqidui/planAhead_run_1/planAhead.log
+# Journal file: E:/ISE/Project_jicunqidui/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/ISE/Project_jicunqidui/pa.fromNetlist.tcl
+set_property iostandard LVCMOS18 [get_ports [list {addr[2]} {addr[1]} {addr[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {in[3]} {in[2]} {in[1]} {in[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {out[3]} {out[2]} {out[1]} {out[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {addr[2]} {addr[1]} {addr[0]}]]
+startgroup
+set_property package_pin T3 [get_ports {addr[2]}]
+endgroup
+startgroup
+set_property package_pin U3 [get_ports {addr[1]}]
+endgroup
+startgroup
+set_property package_pin T4 [get_ports {addr[0]}]
+endgroup
+startgroup
+set_property package_pin R6 [get_ports {in[3]}]
+endgroup
+startgroup
+set_property package_pin U7 [get_ports {in[2]}]
+endgroup
+startgroup
+set_property package_pin AB7 [get_ports {in[1]}]
+endgroup
+startgroup
+set_property package_pin AB8 [get_ports {in[0]}]
+endgroup
+startgroup
+set_property package_pin R1 [get_ports {out[3]}]
+endgroup
+startgroup
+set_property package_pin P2 [get_ports {out[2]}]
+endgroup
+startgroup
+set_property package_pin P1 [get_ports {out[1]}]
+endgroup
+startgroup
+set_property package_pin N2 [get_ports {out[0]}]
+endgroup
+set_property iostandard LVCMOS18 [get_ports [list clk]]
+set_property iostandard LVCMOS18 [get_ports [list read]]
+set_property iostandard LVCMOS18 [get_ports [list write]]
+set_property pulltype PULLDOWN [get_ports [list clk]]
+set_property package_pin "" [get_ports [list  clk]]
+startgroup
+set_property package_pin V3 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin V8 [get_ports read]
+endgroup
+startgroup
+set_property package_pin AA8 [get_ports write]
+endgroup
+save_constraints

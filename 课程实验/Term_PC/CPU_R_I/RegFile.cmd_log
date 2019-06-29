@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/ISE/Term_PC/CPU_R_I/RegFile.v -lang verilog -prj CPU_R_I -o RegFile.spl -module RegFile -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 RegFile.spl E:/ISE/Term_PC/CPU_R_I/RegFile.sym 

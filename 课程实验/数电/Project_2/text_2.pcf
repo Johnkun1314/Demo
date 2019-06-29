@@ -1,0 +1,20 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Dec 09 12:49:32 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "A<0>" LOCATE = SITE "U3" LEVEL 1;
+COMP "A<1>" LOCATE = SITE "T3" LEVEL 1;
+COMP "EN" LOCATE = SITE "U7" LEVEL 1;
+COMP "B<0>" LOCATE = SITE "V3" LEVEL 1;
+COMP "B<1>" LOCATE = SITE "T4" LEVEL 1;
+COMP "C<0>" LOCATE = SITE "W4" LEVEL 1;
+COMP "C<1>" LOCATE = SITE "V4" LEVEL 1;
+COMP "D<0>" LOCATE = SITE "Y6" LEVEL 1;
+COMP "D<1>" LOCATE = SITE "Y4" LEVEL 1;
+COMP "S<0>" LOCATE = SITE "AB8" LEVEL 1;
+COMP "S<1>" LOCATE = SITE "AB7" LEVEL 1;
+COMP "Y<0>" LOCATE = SITE "J2" LEVEL 1;
+COMP "Y<1>" LOCATE = SITE "L1" LEVEL 1;
+SCHEMATIC END;
+

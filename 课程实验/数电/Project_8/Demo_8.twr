@@ -1,0 +1,82 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml Demo_8.twx Demo_8.ncd -o Demo_8.twr Demo_8.pcf -ucf
+Demo_8.ucf
+
+Design file:              Demo_8.ncd
+Physical constraint file: Demo_8.pcf
+Device,package,speed:     xc7a100t,fgg484,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock R to Pad
+------------+-----------------+------------+-----------------+------------+-----------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                       | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)      | Phase  |
+------------+-----------------+------------+-----------------+------------+-----------------------+--------+
+Q1          |         5.253(R)|      SLOW  |         2.498(R)|      FAST  |GND_1_o_GND_1_o_AND_1_o|   0.000|
+Q2          |         5.027(R)|      SLOW  |         2.370(R)|      FAST  |GND_1_o_GND_1_o_AND_1_o|   0.000|
+------------+-----------------+------------+-----------------+------------+-----------------------+--------+
+
+Clock S to Pad
+------------+-----------------+------------+-----------------+------------+-----------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                       | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)      | Phase  |
+------------+-----------------+------------+-----------------+------------+-----------------------+--------+
+Q1          |         6.013(R)|      SLOW  |         2.877(R)|      FAST  |GND_1_o_GND_1_o_AND_1_o|   0.000|
+Q2          |         5.787(R)|      SLOW  |         2.749(R)|      FAST  |GND_1_o_GND_1_o_AND_1_o|   0.000|
+------------+-----------------+------------+-----------------+------------+-----------------------+--------+
+
+Clock to Setup on destination clock R
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+R              |    0.589|    0.589|         |         |
+S              |    1.287|    1.287|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock S
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+R              |    0.063|    0.063|         |         |
+S              |    0.660|    0.660|         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Sun Dec 09 13:46:55 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5004 MB
+
+
+

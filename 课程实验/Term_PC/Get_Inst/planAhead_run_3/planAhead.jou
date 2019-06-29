@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Thu May 09 11:45:08 2019
+# Process ID: 27488
+# Log file: E:/ISE/Term_PC/Get_Inst/planAhead_run_3/planAhead.log
+# Journal file: E:/ISE/Term_PC/Get_Inst/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/ISE/Term_PC/Get_Inst/pa.fromNetlist.tcl

@@ -1,0 +1,17 @@
+[Inputs]
+=Inst_code[31:0]=
+=OP[5:0]=
+=func[5:0]=
+[Outputs]
+write_reg
+Mem_Write
+rt_imm_s
+imm_s
+=ALU_OP[3:0]=
+=alu_mem_s[1:0]=
+=rd_rt_s[1:0]=
+=PC_s[1:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel yimaqi
+

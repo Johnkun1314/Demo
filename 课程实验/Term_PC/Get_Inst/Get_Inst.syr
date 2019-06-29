@@ -1,0 +1,504 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> Reading design: Get_Inst.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Get_Inst.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Get_Inst"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-fgg484
+
+---- Source Options
+Top Module Name                    : Get_Inst
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\ISE\Term_PC\Regs\LedTube.v" into library work
+Parsing module <LedTube>.
+Analyzing Verilog file "E:\ISE\Term_PC\Get_Inst\ipcore_dir\Inst_Rom.v" into library work
+Parsing module <Inst_Rom>.
+Analyzing Verilog file "E:\ISE\Term_PC\Get_Inst\Get_Inst.v" into library work
+Parsing module <Get_Inst>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "E:\ISE\Term_PC\Get_Inst\Get_Inst.v" Line 27: Port wea is not connected to this instance
+
+Elaborating module <Get_Inst>.
+
+Elaborating module <Inst_Rom>.
+WARNING:HDLCompiler:1499 - "E:\ISE\Term_PC\Get_Inst\ipcore_dir\Inst_Rom.v" Line 39: Empty module <Inst_Rom> remains a black box.
+
+Elaborating module <LedTube>.
+WARNING:HDLCompiler:413 - "E:\ISE\Term_PC\Regs\LedTube.v" Line 24: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:552 - "E:\ISE\Term_PC\Get_Inst\Get_Inst.v" Line 27: Input port wea[0] is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Get_Inst>.
+    Related source file is "E:\ISE\Term_PC\Get_Inst\Get_Inst.v".
+WARNING:Xst:2935 - Signal 'shine', unconnected in block 'Get_Inst', is tied to its initial value (1).
+    Found 32-bit register for signal <PC>.
+    Found 32-bit adder for signal <PC[31]_GND_1_o_add_1_OUT> created at line 22.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <Get_Inst> synthesized.
+
+Synthesizing Unit <LedTube>.
+    Related source file is "E:\ISE\Term_PC\Regs\LedTube.v".
+    Found 3-bit register for signal <which>.
+    Found 20-bit register for signal <times>.
+    Found 20-bit adder for signal <times[19]_GND_3_o_add_2_OUT> created at line 18.
+    Found 3-bit adder for signal <which[2]_GND_3_o_add_7_OUT> created at line 24.
+    Found 16x8-bit Read Only RAM for signal <led>
+    Found 1-bit 8-to-1 multiplexer for signal <digit<3>> created at line 42.
+    Found 1-bit 8-to-1 multiplexer for signal <digit<2>> created at line 42.
+    Found 1-bit 8-to-1 multiplexer for signal <digit<1>> created at line 42.
+    Found 1-bit 8-to-1 multiplexer for signal <digit<0>> created at line 42.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <LedTube> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 3
+ 20-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 3
+ 20-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 1
+# Multiplexers                                         : 4
+ 1-bit 8-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/Inst_Rom.ngc>.
+Loading core <Inst_Rom> for timing and area information for instance <your_instance_name>.
+
+Synthesizing (advanced) Unit <Get_Inst>.
+The following registers are absorbed into accumulator <PC>: 1 register on signal <PC>.
+Unit <Get_Inst> synthesized (advanced).
+
+Synthesizing (advanced) Unit <LedTube>.
+The following registers are absorbed into counter <times>: 1 register on signal <times>.
+The following registers are absorbed into counter <which>: 1 register on signal <which>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_led> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <digit>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <led>           |          |
+    -----------------------------------------------------------------------
+Unit <LedTube> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
+# Counters                                             : 2
+ 20-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 32-bit up accumulator                                 : 1
+# Multiplexers                                         : 4
+ 1-bit 8-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <PC_0> (without init value) has a constant value of 0 in block <Get_Inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PC_1> (without init value) has a constant value of 0 in block <Get_Inst>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Get_Inst> ...
+
+Optimizing unit <LedTube> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Get_Inst, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Get_Inst.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 194
+#      GND                         : 2
+#      INV                         : 3
+#      LUT1                        : 48
+#      LUT4                        : 9
+#      LUT5                        : 2
+#      LUT6                        : 26
+#      MUXCY                       : 48
+#      MUXF7                       : 4
+#      VCC                         : 2
+#      XORCY                       : 50
+# FlipFlops/Latches                : 53
+#      FD                          : 14
+#      FDE                         : 3
+#      FDR                         : 36
+# RAMS                             : 1
+#      RAMB18E1                    : 1
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 45
+#      IBUF                        : 1
+#      OBUF                        : 44
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tfgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              53  out of  126800     0%  
+ Number of Slice LUTs:                   88  out of  63400     0%  
+    Number used as Logic:                88  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     88
+   Number with an unused Flip Flop:      35  out of     88    39%  
+   Number with an unused LUT:             0  out of     88     0%  
+   Number of fully used LUT-FF pairs:    53  out of     88    60%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          47
+ Number of bonded IOBs:                  47  out of    285    16%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    135     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+cls                                | BUFGP                  | 31    |
+clk                                | BUFGP                  | 23    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.494ns (Maximum Frequency: 401.027MHz)
+   Minimum input arrival time before clock: 0.736ns
+   Maximum output required time after clock: 2.437ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cls'
+  Clock period: 2.193ns (frequency: 456.080MHz)
+  Total number of paths / destination ports: 477 / 42
+-------------------------------------------------------------------------
+Delay:               1.096ns (Levels of Logic = 1)
+  Source:            PC_7 (FF)
+  Destination:       your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Source Clock:      cls falling
+  Destination Clock: cls rising
+
+  Data Path: PC_7 to your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.361   0.293  PC_7 (PC_7)
+     begin scope: 'your_instance_name:addra<5>'
+     RAMB18E1:ADDRARDADDR10        0.442          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
+    ----------------------------------------
+    Total                      1.096ns (0.803ns logic, 0.293ns route)
+                                       (73.2% logic, 26.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.494ns (frequency: 401.027MHz)
+  Total number of paths / destination ports: 676 / 32
+-------------------------------------------------------------------------
+Delay:               2.494ns (Levels of Logic = 2)
+  Source:            instance_name/times_13 (FF)
+  Destination:       instance_name/times_19 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: instance_name/times_13 to instance_name/times_19
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.361   0.697  instance_name/times_13 (instance_name/times_13)
+     LUT6:I0->O           18   0.097   0.590  instance_name/GND_3_o_GND_3_o_equal_7_o<19>3 (instance_name/GND_3_o_GND_3_o_equal_7_o<19>2)
+     LUT5:I2->O            6   0.097   0.302  instance_name/GND_3_o_GND_3_o_equal_7_o<19>4 (instance_name/GND_3_o_GND_3_o_equal_7_o)
+     FDR:R                     0.349          instance_name/times_14
+    ----------------------------------------
+    Total                      2.494ns (0.904ns logic, 1.590ns route)
+                                       (36.3% logic, 63.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cls'
+  Total number of paths / destination ports: 30 / 30
+-------------------------------------------------------------------------
+Offset:              0.736ns (Levels of Logic = 1)
+  Source:            clr (PAD)
+  Destination:       PC_2 (FF)
+  Destination Clock: cls falling
+
+  Data Path: clr to PC_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            30   0.001   0.386  clr_IBUF (clr_IBUF)
+     FDR:R                     0.349          PC_2
+    ----------------------------------------
+    Total                      0.736ns (0.350ns logic, 0.386ns route)
+                                       (47.6% logic, 52.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cls'
+  Total number of paths / destination ports: 242 / 39
+-------------------------------------------------------------------------
+Offset:              2.258ns (Levels of Logic = 4)
+  Source:            PC_25 (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      cls falling
+
+  Data Path: PC_25 to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.361   0.561  PC_25 (PC_25)
+     LUT6:I2->O            1   0.097   0.000  instance_name/Mmux_digit<1>_3 (instance_name/Mmux_digit<1>_3)
+     MUXF7:I1->O           7   0.279   0.584  instance_name/Mmux_digit<1>_2_f7 (instance_name/digit<1>)
+     LUT4:I0->O            1   0.097   0.279  instance_name/led<4>1 (led_4_OBUF)
+     OBUF:I->O                 0.000          led_4_OBUF (led<4>)
+    ----------------------------------------
+    Total                      2.258ns (0.834ns logic, 1.424ns route)
+                                       (36.9% logic, 63.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 143 / 10
+-------------------------------------------------------------------------
+Offset:              2.437ns (Levels of Logic = 4)
+  Source:            instance_name/which_1 (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: instance_name/which_1 to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.361   0.740  instance_name/which_1 (instance_name/which_1)
+     LUT6:I0->O            1   0.097   0.000  instance_name/Mmux_digit<1>_3 (instance_name/Mmux_digit<1>_3)
+     MUXF7:I1->O           7   0.279   0.584  instance_name/Mmux_digit<1>_2_f7 (instance_name/digit<1>)
+     LUT4:I0->O            1   0.097   0.279  instance_name/led<4>1 (led_4_OBUF)
+     OBUF:I->O                 0.000          led_4_OBUF (led<4>)
+    ----------------------------------------
+    Total                      2.437ns (0.834ns logic, 1.603ns route)
+                                       (34.2% logic, 65.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.494|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cls
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cls            |         |    1.096|    2.142|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.40 secs
+ 
+--> 
+
+Total memory usage is 4654592 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

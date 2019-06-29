@@ -1,0 +1,19 @@
+
+
+
+// Instantiate the module
+yimaqi instance_name (
+    .Inst_code(Inst_code), 
+    .OP(OP), 
+    .func(func), 
+    .write_reg(write_reg), 
+    .ALU_OP(ALU_OP), 
+    .Mem_Write(Mem_Write), 
+    .alu_mem_s(alu_mem_s), 
+    .rt_imm_s(rt_imm_s), 
+    .imm_s(imm_s), 
+    .rd_rt_s(rd_rt_s), 
+    .PC_s(PC_s)
+    );
+
+
