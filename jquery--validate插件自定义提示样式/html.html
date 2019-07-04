@@ -1,0 +1,100 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery表单验证插件----自定义错误样式</title>
+
+<style type="text/css">
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+ validate.error{   /*  错误样式       */
+    color: red;
+    width: 20px;
+    line-height: 20px;
+    margin-left: 2px;
+}
+ .error_img{    /*  错误图片大小 */
+    width: 10px;
+    height: 10px;
+}
+.right_img{           /*正确图片大小*/
+   width: 10px;
+   height: 10px;
+}
+.table{                 /*表格行间距*/
+    margin: 5px 0;
+}
+</style>
+
+  
+</head>
+<body>
+<form action="#" method="GET" class="form" id="form">
+    <fieldset >
+        <legend>jQuery表单验证插件----自定义错误样式</legend>
+        <p class="table">
+            <label for="username">username</label>
+            <input id="username" class="username" name="username"  type="text">
+        </p>
+        <p class="table">
+            <label for="password">password</label>
+            <input id="password" name="password"  type="text">
+        </p>
+        <p class="table">
+            <label for="confirm_password">confirm_password</label>
+            <input id="confirm_password" name="confirm_password"  type="text">
+        </p>
+        <input type="submit" value="regist">
+    </fieldset>
+</form>
+    
+
+<script src="jquery/jquery-2.1.4.min.js"></script>
+<script src="jquery/validate/jquery.validate.min.js"></script>
+<script src="jquery/validate/jquery.validate.js"></script>
+<script src="jquery/validate/localization/messages_zh.js"></script>
+
+
+<script type="text/javascript">
+   let error_pic = "<img class='error_img' src='img/error.png'>"    //正确样式,class和src可以自行更改
+   let right_pic = "<img class='right_img' src='img/right.png'>"    //错误样式,class和src可以自行更改
+   $('#form').validate({       
+           debug:true,      //调试模式开启
+           rules:{          //输入规则,对象名为标签'id',上述标签的id分别为'username','password','confirm_password'
+               username:{ 
+                   required:true,
+                   minlength:2
+               },
+               password:{
+                   required:true,
+                   minlength:6
+               },
+               confirm_password:{
+                   equalTo:"password"
+               }
+           },
+         messages:{     //提示信息,对象名为标签'id',规则后面为提示内容
+             username:{
+                 required:error_pic+'请输入用户名',
+                 minlength:error_pic+'用户名长度应该大于2位'
+             },
+             password:{
+                 required:error_pic+'请输入密码',
+                 minlength:error_pic+'密码长度应大于6位'
+             },
+             confirm_password:{
+                 equalTo:error_pic+'两次密码不相同'
+             }
+           },
+        errorElement:"validate",   //显示提示内容的节点名,可以自定义,这里自定位为'validatte',如果修改,需要把css的validate也对应修改
+        success:function(element){  //正确验证函数,element为节点'errorElement'
+            element.html(right_pic);  //使用html()函数插入'right_img',可以自行更改
+        }
+   })
+</script>
+</body>
+</html>
