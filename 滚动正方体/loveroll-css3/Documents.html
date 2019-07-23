@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id='wrapter'>
+        <div id="cube">
+            <div class="front"><img src="demojpg/two.jpg" alt=""   ></div>
+            <div class="back"><img src="demojpg/five.jpg" alt="" ></div>
+            <div class="left"><img src="demojpg/four.jpg" alt="" ></div>
+            <div class="right"><img src="demojpg/one.jpg" alt=""></div>
+            <div class="top"><img src="demojpg/six.jpg" alt=""></div>
+            <div class="bottom"><img src="demojpg/three.jpg" alt=""></div>
+        </div>
+    </div>
+
+    <script>
+        var heard= document.getElementById("wrapter");
+
+        for(var i = 0; i < 36; i++) {
+
+            var cdiv = document.createElement("div");
+
+            cdiv.className = "wrapter";
+
+            cdiv.style.border="2px solid #e4393c";
+ 
+            cdiv.style.borderLeft="0";
+            cdiv.style.borderBottom="0";
+
+            cdiv.style.transform = "rotateY(" + i * 10 + "deg) rotateZ(45deg) translateX(150px)";
+
+            heard.appendChild(cdiv);
+        }
+
+    </script>
+</body>
+</html>
