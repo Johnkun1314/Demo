@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<script type="text/javascript" src="C:\Users\Johnke\OneDrive\桌面\tools.js"></script>
+<script src="js.js"></script>
+ <div class="wrapter">
+    <div class="content-pic">
+    <ul >
+        <li class="pic-one"><img  src="demojpg/one.jpg" alt=""></li>
+        <li class="pic-two"><img  src="demojpg/two.jpg" alt=""></li>
+        <li class="pic-three"><img  src="demojpg/three.jpg" alt=""></li>
+        <li class="pic-four"><img  src="demojpg/one.jpg" alt=""></li>
+    </ul>
+    </div>
+    <div class="left-control"></div>
+    <div class="right-control"></div>
+    <div class="content-dot">
+        <ul class="dot">
+        <li class="dot-one"></li>
+        <li class="dot-two"></li>
+        <li class="dot-three"></li>
+    </ul>
+    </div>
+    
+ </div>
+ 
+    
+ <script>
+     var wrapter = document.getElementsByTagName('div')[0];
+     var content_pic = document.getElementsByTagName ('div')[1]; 
+     var setoffSpeed = 500;
+        setInterval(function() {
+
+            if(parseInt(getStyle(content_pic,'left')) == -1500){
+                content_pic.style.left = '0px';
+            }else{
+                content_pic.style.left =parseInt(getStyle(content_pic,'left'))-setoffSpeed+'px';
+
+            }
+                    }, 2000);
+
+    var left_control = document.getElementsByTagName('div')[2];
+    var right_control = document.getElementsByTagName('div')[3];
+        addEvent(left_control,'click',Prevoius);
+        addEvent(right_control,'click',Next);
+          function Prevoius(e){
+               var setoff =  getStyle(content_pic,'left')
+               
+               if(parseInt(getStyle(content_pic,'left')) == 0){
+               content_pic.style.left = '-1000px';
+               }else{
+                content_pic.style.left = parseInt(setoff) + 500 + 'px';
+               }
+          }
+          function Next(e){
+            var setoff =  getStyle(content_pic,'left')
+               if(parseInt(getStyle(content_pic,'left')) == -1000){
+                content_pic.style.left = '0px';
+               }else{
+                content_pic.style.left = parseInt(setoff) - 500 + 'px';
+               }
+               
+          }
+
+ </script>
+</body>
+</html>
