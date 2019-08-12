@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Bootstrap 实例 - 响应式的列重置</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/play.css">
+   <style>
+        
+   </style>
+</head>
+<body>
+      
+   <div class="container">
+        <div class="well-lg text-center">
+           <h2>John的播放器</h2>
+         </div>
+      <div class="row body">
+          <div class="col-md-3 col-md-offset-1 sing-list">
+             <ul class="sings">
+
+             </ul>
+             <div class="scrollbar"></div>
+          </div>
+          <div class="col-md-7 singer-photo">
+             <img src="songs/photo/default.jpg" class="img-circle center-block" alt="" srcset="">
+             <div class="footer row " >
+                  <div class="col-md-2 fun-wrapter">
+                        <span class="playbar-photo">
+                         
+                        </span>
+                        <div class="fun center-block text-center">
+                              <span class=" glyphicon glyphicon-step-backward"></span>
+                              <span class="glyphicon glyphicon-play"></span>
+                              <span class="glyphicon glyphicon-step-forward"></span>
+                           </div>
+                    </div>
+                  <div class=" col-md-10 col-md-offset-0 playbar-wrapter ">
+                    
+                     <span class="play-sing">好音乐都在John的播放器</span>
+                     <span class="progress-time pull-right">
+                        <span class="sing-currentTime">00:00</span>/ 
+                        <span class="sing-duration">00:00</span>
+                     </span>
+                     <div class="playbar-progress progress">
+                        <div class="progress-bar" style="width:0%;background-color:blueviolet"></div>
+                     </div>
+
+                     <audio src=""  autoplay  class="col-md-8 playbar"></audio>
+                  </div>
+                  
+            </div>
+          </div>
+      </div>
+   </div>
+  
+   <script src="jquery-3.3.1.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/velocity/velocity.js"></script>
+   <script src="js/velocity/velocity-ui.js"></script>
+   <script src="js/bar.js"></script>
+   <script src="js/play.js"></script>
+   <script>
+
+   </script>
+</body>
+</html>
+
+
